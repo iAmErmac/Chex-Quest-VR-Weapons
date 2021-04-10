@@ -1,0 +1,109 @@
+//Ammo spawner
+
+Actor ClipSpawner : RandomSpawner replaces PaintAmmo
+{
+	DropItem "NewMiniZorchRecharge"
+}
+
+Actor ClipSpawner2 : RandomSpawner replaces PaintAmmo2
+{
+	DropItem "NewMiniZorchRecharge2"
+}
+
+Actor ClipBoxSpawner : RandomSpawner replaces PaintAmmoBig
+{
+	DropItem "NewMiniZorchPack"
+}
+
+Actor ClipBoxSpawner2 : RandomSpawner replaces PaintAmmoBig2
+{
+	DropItem "NewMiniZorchPack2"
+}
+
+Actor ClipSpawner3 : RandomSpawner replaces OoziAmmo
+{
+	DropItem "NewMiniZorchRecharge"
+}
+
+Actor ClipSpawner4 : RandomSpawner replaces OoziAmmo2
+{
+	DropItem "NewMiniZorchRecharge2"
+}
+
+Actor ClipBoxSpawner3 : RandomSpawner replaces OoziAmmoBig
+{
+	DropItem "NewMiniZorchPack3"
+}
+
+Actor ClipBoxSpawner4 : RandomSpawner replaces OoziAmmoBig2
+{
+	DropItem "NewMiniZorchPack4"
+}
+
+Actor ShellSpawner : RandomSpawner replaces ShotboltAmmo
+{
+	DropItem "NewLargeZorchRecharge"
+}
+
+Actor ShellSpawner2 : RandomSpawner replaces ShotboltAmmo2
+{
+	DropItem "NewLargeZorchRecharge2"
+}
+
+Actor ShellBoxSpawner : RandomSpawner replaces ShotboltAmmoBig
+{
+	DropItem "NewLargeZorchPack"
+}
+
+Actor ShellBoxSpawner2 : RandomSpawner replaces ShotboltAmmoBig2
+{
+	DropItem "NewLargeZorchPack2"
+}
+
+Actor RocketAmmoSpawner : RandomSpawner replaces HellshellAmmo
+{
+	DropItem "NewPropulsorZorch"
+}
+
+Actor RocketBoxSpawner : RandomSpawner replaces HellShellAmmoBig
+{
+	DropItem "NewPropulsorZorchPack"
+}
+
+Actor RocketAmmoSpawner2 : RandomSpawner replaces Goonades 2119
+{
+	DropItem "NewPropulsorZorch"
+}
+
+Actor CellSpawner : RandomSpawner replaces MarbleAmmo
+{
+	DropItem "NewPhasingZorch"
+}
+
+Actor CellSpawner2 : RandomSpawner replaces MarbleAmmo2
+{
+	DropItem "NewPhasingZorch2"
+}
+
+Actor CellPackSpawner : RandomSpawner replaces MarbleAmmoBig
+{
+	DropItem "NewPhasingZorchPack"
+}
+
+Actor CellPackSpawner2 : RandomSpawner replaces MarbleAmmoBig2
+{
+	DropItem "NewPhasingZorchPack2"
+}
+
+Actor BackpackSpawner : RandomSpawner replaces SquareBackpack
+{
+	DropItem "NewZorchpack"
+}
+
+Actor AmmoCaseSpawner : SmallAmmoCase replaces AmmoCase
+{
+}
+
+Actor AmmoCase2Spawner : BigAmmoCase replaces AmmoCase2
+{
+}

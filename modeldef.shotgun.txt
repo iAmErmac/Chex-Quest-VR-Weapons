@@ -1,0 +1,100 @@
+Model NewLargeZorcher
+{
+	Path "models/weapons/largezorcher"
+	Model 0 "LargeZorcher.md3"
+	Model 1 "LargeZorcher_g.md3"
+	SurfaceSkin 0 0 "LargeZorcher.png"
+	SurfaceSkin 0 1 "LargeZorcher.png"
+	SurfaceSkin 0 2 "meter_r.png"
+	SurfaceSkin 0 3 "meter_r.png"
+	SurfaceSkin 0 4 "meter_r.png"
+	SurfaceSkin 0 5 "meter_r.png"
+	SurfaceSkin 0 6 "meter_g.png"
+	SurfaceSkin 0 7 "meter_g.png"
+	SurfaceSkin 0 8 "meter_g.png"
+	SurfaceSkin 0 9 "LargeZorch_box.png"
+	//SurfaceSkin 0 10 "LargeZorcher_clip_g.png"
+	SurfaceSkin 0 12 "LargeZorcher_clip_e.png"
+	SurfaceSkin 0 13 "LargeZorcher_clip_e.png"
+	SurfaceSkin 0 14 "LargeZorcher_clip_e.png"
+	SurfaceSkin 0 15 "LargeZorcher_clip_e.png"
+	Skin 1 "LargeZorcher_clip_g.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	//Ready
+	FrameIndex SHTG A 0 0	FrameIndex SHTG A 1 0
+	
+	//Fire
+	SurfaceSkin 0 1 "LargeZorcher_F.png"
+	SurfaceSkin 0 6 "meter_r.png"
+	FrameIndex SHTG B 0 3	FrameIndex SHTG B 1 0
+	SurfaceSkin 0 1 "LargeZorcher.png"
+	SurfaceSkin 0 7 "meter_r.png"
+	SurfaceSkin 0 8 "meter_r.png"
+	FrameIndex SHTG C 0 27	FrameIndex SHTG C 1 17
+	FrameIndex SHTG D 0 28	FrameIndex SHTG D 1 18
+	SurfaceSkin 0 8 "meter_g.png"
+	FrameIndex SHTG E 0 29	FrameIndex SHTG E 1 21
+	FrameIndex SHTG F 0 30	FrameIndex SHTG F 1 22
+	SurfaceSkin 0 7 "meter_g.png"
+	FrameIndex SHTG G 0 31	FrameIndex SHTG G 1 23
+	FrameIndex SHTG H 0 32	FrameIndex SHTG H 1 24
+	SurfaceSkin 0 6 "meter_g.png"
+	FrameIndex SHTG I 0 33	FrameIndex SHTG I 1 25
+	SurfaceSkin 0 5 "meter_g.png"
+	FrameIndex SHTG J 0 34	FrameIndex SHTG J 1 26
+	FrameIndex SHTG K 0 35	FrameIndex SHTG K 1 27
+	SurfaceSkin 0 4 "meter_g.png"
+	FrameIndex SHTG L 0 36	FrameIndex SHTG L 1 28
+	FrameIndex SHTG M 0 37	FrameIndex SHTG M 1 29
+	SurfaceSkin 0 3 "meter_g.png"
+	FrameIndex SHTG N 0 38	FrameIndex SHTG N 1 30
+	FrameIndex SHTG O 0 39	FrameIndex SHTG O 1 31
+	SurfaceSkin 0 2 "meter_g.png"
+	FrameIndex SHTG P 0 40	FrameIndex SHTG P 1 32
+	FrameIndex SHTG Q 0 41	FrameIndex SHTG Q 1 33
+	FrameIndex SHTG R 0 42	FrameIndex SHTG R 1 34
+	FrameIndex SHTG S 0 43	FrameIndex SHTG S 1 35
+	FrameIndex SHTG T 0 44	FrameIndex SHTG T 1 36
+	FrameIndex SHTG U 0 45	FrameIndex SHTG U 1 37
+	FrameIndex SHTG V 0 46	FrameIndex SHTG V 1 38
+	FrameIndex SHTG W 0 47	FrameIndex SHTG W 1 39
+	FrameIndex SHTG X 0 48	FrameIndex SHTG X 1 40
+	FrameIndex SHTG Y 0 49	FrameIndex SHTG Y 1 41
+	FrameIndex SHTG Z 0 50	FrameIndex SHTG Z 1 42
+	FrameIndex SHT2 A 0 51	FrameIndex SHT2 A 1 43
+	FrameIndex SHT2 B 0 52	FrameIndex SHT2 B 1 44
+	FrameIndex SHT2 C 0 53	FrameIndex SHT2 C 1 45
+	FrameIndex SHT2 D 0 54	FrameIndex SHT2 D 1 46
+	FrameIndex SHT2 E 0 55	FrameIndex SHT2 E 1 47
+	FrameIndex SHT2 F 0 56	FrameIndex SHT2 F 1 48
+	FrameIndex SHT2 G 0 57	FrameIndex SHT2 G 1 49
+	SurfaceSkin 0 2 "meter_r.png"
+	SurfaceSkin 0 3 "meter_r.png"
+	FrameIndex SHT2 H 0 58	FrameIndex SHT2 H 1 50
+	FrameIndex SHT2 I 0 59	FrameIndex SHT2 I 1 51
+	SurfaceSkin 0 4 "meter_r.png"
+	SurfaceSkin 0 5 "meter_r.png"
+	FrameIndex SHT2 J 0 59	FrameIndex SHT2 J 1 50
+}
+
+//Muzzle flash
+Model NewLargeZorcher
+{
+	Path "models/weapons/largezorcher"
+	Model 0 "LargeZorcher_MF.md3"
+	Skin 0 "LargeZorcher_MF1.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex SHTF A 0 0
+	Skin 0 "LargeZorcher_MF2.png"
+	FrameIndex SHTF B 0 0
+	Skin 0 "LargeZorcher_MF3.png"
+	FrameIndex SHTF C 0 0
+}

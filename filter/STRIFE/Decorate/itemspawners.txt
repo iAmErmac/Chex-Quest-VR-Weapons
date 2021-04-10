@@ -1,0 +1,79 @@
+
+//Weapon spawner for map or quest specific objects
+
+//Drop additional stuff when Beldin is killed
+ACTOR BeldinsNewRing : Inventory
+{
+  +NOTDMATCH
+  +FLOORCLIP
+  +INVENTORY.INVBAR
+  Tag "$TAG_BELDINSRING" // "Ring"
+  Inventory.Icon "I_RING"
+  Inventory.GiveQuest 1
+  Inventory.PickupMessage "$TXT_BELDINSRING" // "You picked up the ring."
+  ConversationID 173
+  States
+  {
+  Spawn:
+    RING A -1
+    Stop
+  }
+}
+
+Actor _BeldinsRing : BeldinDropItems replaces BeldinsRing
+{
+	ConversationID 173
+}
+
+//Chalice
+ACTOR StrifeOfferingChalice : Inventory
+{
+  +DROPPED
+  +FLOORCLIP
+  +INVENTORY.INVBAR
+  +FIXMAPTHINGPOS
+  Radius 10
+  Height 16
+  Tag "$TAG_OFFERINGCHALICE" // "Offering Chalice"
+  Inventory.Icon "I_RELC"
+  Inventory.PickupMessage "$TXT_OFFERINGCHALICE" // "You picked up the Offering Chalice."
+  Inventory.GiveQuest 2
+  ConversationID 174
+  States
+  {
+  Spawn:
+    RELC A -1
+    Stop
+  }
+}
+Actor _OfferingChalice : ChaliceItemSpawner replaces OfferingChalice
+{
+  ConversationID 174
+}
+
+//Targeter is useless in VR
+Actor TargeterReplacer replaces Targeter 207 
+{
+	ConversationID 167
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_JumpIfInventory("NewSuperBootspork", 1, "SpawnSSG", AAPTR_PLAYER1)
+		TNT1 A 1 A_DropItem("SporkSpawner")
+		TNT1 AAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4))
+		TNT1 A 1 A_Jump(100, "SpawnA", "SpawnB")
+		Stop
+	SpawnSSG:
+		TNT1 A 1 A_DropItem("SuperLargeZorcherSpawner")
+		TNT1 AAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4))
+		TNT1 A 1 A_Jump(100, "SpawnA", "SpawnB")
+		Stop
+	SpawnA:
+		TNT1 A 1 A_DropItem("BasicAmmoSpawner")
+		Stop
+	SpawnB:
+		TNT1 A 1 A_DropItem("AdvancedAmmoSpawner")
+		Stop
+	}
+}

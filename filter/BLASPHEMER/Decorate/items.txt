@@ -1,0 +1,50 @@
+
+//Pickup items
+
+//ACTOR PowerHalfDamage : PowerDamage
+//{
+//	Damagefactor "normal", 1.5
+//}
+
+//ACTOR DamageSphere : PowerupGiver
+//{
+//	+FLOATBOB
+//	+COUNTITEM
+//	+INVENTORY.PICKUPFLASH
+//	Inventory.Icon "ARTIPWBK"
+//	Powerup.Type HalfDamage
+//	Powerup.Color RedMap
+//	Inventory.PickupMessage "$TXT_ARTITOMEOFPOWER"
+//	Tag "$TAG_ARTITOMEOFPOWER"
+//	States
+//	{
+//	Spawn:
+//		PWBK A 350
+//		Loop
+//	}
+//}
+
+Actor RapidFirePowerup : PowerupGiver
+{
+  +COUNTITEM
+  +FLOATBOB
+  +INVENTORY.PICKUPFLASH
+  Inventory.Icon "ARTIPWBK"
+  Powerup.Type RapidFire
+  Inventory.PickupMessage "$TXT_ARTITOMEOFPOWER"
+  Tag "$TAG_ARTITOMEOFPOWER"
+  States
+  {
+  Spawn:
+    PWBK A 350
+    Loop
+  }
+}
+
+ACTOR PowerRapidFire : PowerDoubleFiringSpeed
+{
+  Powerup.Duration -40
+  Inventory.Icon "SPINBK0"
+  +INVENTORY.NOTELEPORTFREEZE
+  Powerup.Color 255, 0, 0, 0.3
+}

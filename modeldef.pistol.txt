@@ -1,0 +1,88 @@
+Model NewMiniZorcher
+{
+	Path "models/weapons/minizorcher"
+	Model 0 "MiniZorcher.md3"
+	SurfaceSkin 0 0 "MiniZorcher.png"
+	SurfaceSkin 0 1 "MiniZorcher.png"
+	SurfaceSkin 0 2 "meter_r.png"
+	SurfaceSkin 0 3 "meter_r.png"
+	SurfaceSkin 0 4 "meter_r.png"
+	SurfaceSkin 0 5 "meter_g.png"
+	SurfaceSkin 0 6 "meter_g.png"
+	SurfaceSkin 0 7 "meter_g.png"
+	SurfaceSkin 0 8 "meter_g.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex PISG A 0 0
+	SurfaceSkin 0 1 "MiniZorcher_f.png"
+	SurfaceSkin 0 5 "meter_r.png"
+	FrameIndex PISG B 0 4
+	SurfaceSkin 0 6 "meter_r.png"
+	FrameIndex PISG C 0 4
+	SurfaceSkin 0 7 "meter_r.png"
+	FrameIndex PISG D 0 8
+	SurfaceSkin 0 8 "meter_r.png"
+	FrameIndex PISG E 0 8
+}
+
+//Muzzle flash
+Model NewMiniZorcher
+{
+	Path "models/weapons/minizorcher"
+	Model 0 "MiniZorcher_MF.md3"
+	Skin 0 "MiniZorcher_MF.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex PISF A 0 0 
+}
+
+//Silenced version
+Model SilencedMiniZorcher
+{
+	Path "models/weapons/minizorcher"
+	Model 0 "MiniZorcher.md3"
+	SurfaceSkin 0 0 "MiniZorcher.png"
+	SurfaceSkin 0 1 "MiniZorcher.png"
+	SurfaceSkin 0 2 "meter_r.png"
+	SurfaceSkin 0 3 "meter_r.png"
+	SurfaceSkin 0 4 "meter_r.png"
+	SurfaceSkin 0 5 "meter_g.png"
+	SurfaceSkin 0 6 "meter_g.png"
+	SurfaceSkin 0 7 "meter_g.png"
+	SurfaceSkin 0 8 "meter_g.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex PISG A 0 0
+	SurfaceSkin 0 1 "MiniZorcher_f.png"
+	SurfaceSkin 0 5 "meter_r.png"
+	FrameIndex PISG B 0 4
+	SurfaceSkin 0 6 "meter_r.png"
+	FrameIndex PISG C 0 4
+	SurfaceSkin 0 7 "meter_r.png"
+	FrameIndex PISG D 0 8
+	SurfaceSkin 0 8 "meter_r.png"
+	FrameIndex PISG E 0 8
+}
+
+//Muzzle flash
+Model SilencedMiniZorcher
+{
+	Path "models/weapons/minizorcher"
+	Model 0 "MiniZorcher_MF.md3"
+	Skin 0 "MiniZorcher_MF.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex PISF A 0 0 
+}

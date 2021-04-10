@@ -1,0 +1,33 @@
+//Weapon spawner
+
+ACTOR _Chainsaw : SporkSpawner replaces Chainsaw 2005
+{
+}
+
+ACTOR _Pistol : MiniZorcherSpawner replaces Pistol 5010
+{
+}
+
+ACTOR _Shotgun : LarzeZorcherSpawner replaces Shotgun 2001
+{
+}
+
+ACTOR _SuperShotgun : SuperLarzeZorcherSpawner replaces SuperShotgun 82
+{
+}
+
+ACTOR _ChainGun : RapidZorcherSpawner replaces ChainGun 2002
+{
+}
+
+ACTOR _RocketLauncher : ZorchPropulsorSpawner replaces RocketLauncher 2003
+{
+}
+
+ACTOR _PlasmaRifle : PhasingZorcherSpawner replaces PlasmaRifle 2004
+{
+}
+
+ACTOR _BFG9000 : LAZDeviceSpawner replaces BFG9000 2006
+{
+}

@@ -1,0 +1,71 @@
+Sprite POOFA0, 23, 55
+{
+   Offset 10, 55
+   Patch POOFA0, 0, 0
+}
+
+Sprite POOFB0, 23, 55
+{
+   Offset 10, 55
+   Patch POOFB0, 0, 0
+}
+
+Sprite POOFC0, 23, 55
+{
+   Offset 10, 55
+   Patch POOFC0, 0, 0
+}
+
+Sprite POF2A0, 39, 55
+{
+   Offset 19, 55
+   Patch POF2A0, 0, 0
+}
+
+Sprite POF2B0, 39, 55
+{
+   Offset 19, 55
+   Patch POF2B0, 0, 0
+}
+
+Sprite POF2C0, 39, 55
+{
+   Offset 19, 55
+   Patch POF2C0, 0, 0
+}
+
+Sprite POF2D0, 39, 55
+{
+   Offset 19, 55
+   Patch POF2D0, 0, 0
+}
+
+Sprite POF3A0, 52, 55
+{
+   Offset 32, 60
+   Patch POF3A0, 0, 0
+}
+
+Sprite POF3B0, 52, 55
+{
+   Offset 32, 60
+   Patch POF3B0, 0, 0
+}
+
+Sprite POF3C0, 52, 55
+{
+   Offset 32, 60
+   Patch POF3C0, 0, 0
+}
+
+Sprite POF3D0, 52, 55
+{
+   Offset 32, 60
+   Patch POF3D0, 0, 0
+}
+
+Sprite POF3E0, 52, 55
+{
+   Offset 32, 60
+   Patch POF3E0, 0, 0
+}

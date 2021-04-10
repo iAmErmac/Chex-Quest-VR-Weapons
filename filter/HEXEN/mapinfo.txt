@@ -1,0 +1,5 @@
+Gameinfo
+{
+	Playerclasses = "ChexenPlayer"
+	EventHandlers = "MonsterNoDeath"
+}

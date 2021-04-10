@@ -1,0 +1,59 @@
+Sprite ZPLSA0, 14, 14
+{
+   Offset 6, 6
+   Patch ZPLSA0, 0, 0
+}
+
+Sprite ZPLSB0, 14, 14
+{
+   Offset 6, 6
+   Patch ZPLSB0, 0, 0
+}
+
+Sprite ZPLEA0, 24, 24
+{
+   Offset 11, 10
+   Patch ZPLEA0, 0, 0
+}
+
+Sprite ZPLEB0, 32, 32
+{
+   Offset 15, 16
+   Patch ZPLEB0, 0, 0
+}
+
+Sprite ZPLEC0, 50, 50
+{
+   Offset 24, 26
+   Patch ZPLEC0, 0, 0
+}
+
+Sprite ZPLED0, 32, 32
+{
+   Offset 15, 16
+   Patch ZPLED0, 0, 0
+}
+
+Sprite ZPLEE0, 34, 36
+{
+   Offset 16, 20
+   Patch ZPLEE0, 0, 0
+}
+
+Sprite PMSLA5, 16, 12
+{
+   Offset 7, 6
+   Patch PMSLA5, 0, 0
+}
+
+Sprite LZS1A0, 45, 23
+{
+   Offset 26, 15
+   Patch LZS1A0, 0, 0
+}
+
+Sprite LZS1B0, 45, 23
+{
+   Offset 26, 15
+   Patch LZS1B0, 0, 0
+}

@@ -1,0 +1,43 @@
+//Weapon spawner
+
+ACTOR _Chainsaw : SporkSpawner replaces Chainsaw 2101
+{
+}
+
+ACTOR _Pistol : MiniZorcherSpawner replaces PaintGun 5010
+{
+}
+
+ACTOR _Shotgun : LarzeZorcherSpawner replaces Shotbow 2103
+{
+}
+
+ACTOR _SuperShotgun : SuperLarzeZorcherSpawner replaces QuadCannon 2104
+{
+}
+
+ACTOR _ChainGun : RapidZorcherSpawner replaces Oozi 2102
+{
+}
+
+ACTOR _ChainGun2 : _ChainGun replaces Oozis 2130
+{
+}
+
+Actor _PaintCannon : RandomSpawner replaces PaintCannon 2105
+{
+	DropItem "SuperLarzeZorcherSpawner"
+	DropItem "RapidZorcherSpawner"
+}
+
+ACTOR _RocketLauncher : ZorchPropulsorSpawner replaces HellshellLauncher 2106
+{
+}
+
+ACTOR _PlasmaRifle : PhasingZorcherSpawner replaces Sceptre 2107
+{
+}
+
+ACTOR _BFG9000 : LAZDeviceSpawner replaces Defibrillator 2116
+{
+}

@@ -1,0 +1,258 @@
+
+//Pickup or world items
+
+Actor BasicArsenalSpawner
+{
+	Speed 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Gravity
+		TNT1 A 0 A_Fall
+		TNT1 A 0 A_Jump(32, "SpawnA", "SpawnB")
+		TNT1 AAAAAAAAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4)) //a simple hack to move spawn spot, emulate a scattered spawning
+		Goto SpawnBonusAmmo
+	SpawnA:
+		TNT1 AAAAAAAAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4))
+		TNT1 A 0 A_DropItem("NewSuperBootspork")
+		Goto SpawnBonusAmmo
+	SpawnB:
+		TNT1 AAAAAAAAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4))
+		TNT1 A 0 A_DropItem("SuperLarzeZorcherSpawner")
+	SpawnBonusAmmo:
+		TNT1 A 0 A_DropItem("BasicAmmoSpawner")
+		Stop
+	}
+}
+
+Actor AdvancedArsenalSpawner
+{
+	Speed 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Fall
+		TNT1 A 1 A_Jump(32, "SpawnA")
+		TNT1 AAAAAAAAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4))
+		Goto SpawnBonusAmmo
+	SpawnA:
+		TNT1 AAAAAAAAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4))
+		TNT1 A 1 A_DropItem("NewPhasingZorcher")
+	SpawnBonusAmmo:
+		TNT1 A 1 A_DropItem("AdvancedAmmoSpawner")
+		Stop
+	}
+}
+
+
+Actor BasicAmmoSpawner
+{
+	Speed 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_Jump(16, "SpawnA")
+		TNT1 A 1 A_Jump(32, "SpawnB")
+		TNT1 A 1 A_Jump(64, "SpawnC")
+		TNT1 A 1 A_Jump(128, "SpawnD")
+		Stop
+	SpawnA:
+		TNT1 A 1 A_DropItem("NewPhasingZorch")
+		Stop
+	SpawnB:
+		TNT1 A 1 A_DropItem("NewPropulsorZorchSpawner")
+		Stop
+	SpawnC:
+		TNT1 A 1 A_DropItem("NewLargeZorchRechargeSpawner")
+		Stop
+	SpawnD:
+		TNT1 A 1 A_DropItem("MiniZorchRechargeSpawner")
+		Stop
+	}
+}
+
+Actor AdvancedAmmoSpawner
+{
+	Speed 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_Jump(16, "SpawnA")
+		TNT1 A 1 A_Jump(32, "SpawnB")
+		TNT1 A 1 A_Jump(64, "SpawnC")
+		TNT1 A 1 A_Jump(128, "SpawnD")
+		Stop
+	SpawnA:
+		TNT1 A 1 A_DropItem("NewPhasingZorchPack")
+		Stop
+	SpawnB:
+		TNT1 A 1 A_DropItem("NewPropulsorZorchSpawnerPack")
+		Stop
+	SpawnC:
+		TNT1 A 1 A_DropItem("NewLargeZorchPack")
+		Stop
+	SpawnD:
+		TNT1 A 1 A_DropItem("NewMiniZorchPack")
+		Stop
+	}
+}
+
+Actor QuartzFlaskSpawner
+{
+	Speed 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_SpawnItem("ArtiHealth2")
+		TNT1 A 0 A_Jump(80, 1)
+		Stop
+		TNT1 AAAAAAAAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4))
+		TNT1 A 1 A_DropItem("LarzeZorcherSpawner")
+		Stop
+	}
+}
+
+Actor AmuletSpawner
+{
+	Speed 15
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_SpawnItem("AmuletOfWarding2")
+		POT1 A 0 A_JumpIfInventory("SuperLarzeZorcherSpawner", 1, "NoSSGSpawn", AAPTR_PLAYER1)
+		TNT1 AAAAAAAAAA 0 A_Warp(AAPTR_DEFAULT, random(1,4), random(1,4))
+		TNT1 A 0 A_DropItem("SuperLarzeZorcherSpawner")
+		Stop
+	NoSSGSpawn:
+		Stop
+	}
+}
+
+Actor HelmSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("PlatinumHelm2")
+		TNT1 A 1 A_DropItem("BasicArsenalSpawner")
+		Stop
+	}
+}
+
+Actor ShieldSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("FalconShield2")
+		TNT1 A 1 A_DropItem("BasicArsenalSpawner")
+		Stop
+	}
+}
+
+Actor MeshArmorSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("MeshArmor2")
+		TNT1 A 1 A_DropItem("AdvancedArsenalSpawner")
+		Stop
+	}
+}
+
+Actor PorkalatorSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("ArtiPork2")
+		TNT1 A 1 A_DropItem("BasicArsenalSpawner") //adding drop chance of arsenal for better spawning result
+		Stop
+	}
+}
+
+Actor SuperHealthSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("ArtiSuperHealth2")
+		TNT1 A 1 A_DropItem("AdvancedArsenalSpawner") //adding drop chance for arsenal for better spawning result
+		Stop
+	}
+}
+
+Actor SittingCorpseSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("HexenSittingCorpse")
+		TNT1 A 1 A_DropItem("BasicArsenalSpawner") //adding drop chance for arsenal for better spawning result
+		Stop
+	}
+}
+
+Actor SleepingCorpseSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("HexenSleepingCorpse")
+		TNT1 A 1 A_DropItem("AdvancedArsenalSpawner") //adding drop chance for arsenal for better spawning result
+		Stop
+	}
+}
+
+Actor BarrelLoots
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Jump(30, "SpawnA", "SpawnB")
+		Goto SpawnBonusAmmo
+	SpawnA:
+		TNT1 A 0 A_SpawnItem("SuperLarzeZorcherSpawner")
+		Goto SpawnBonusAmmo
+	SpawnB:
+		TNT1 A 0 A_SpawnItem("NewPhasingZorcher")
+	SpawnBonusAmmo:
+		TNT1 A 0 A_Jump(128, "SpawnAmmoA", "SpawnAmmoB", "SpawnAmmoC", "SpawnAmmoD", "SpawnAmmoE", "SpawnAmmoF")
+		Goto Death
+	SpawnAmmoA:
+		TNT1 A 0 A_SpawnItem("NewLargeZorchPack")
+		Goto Death
+	SpawnAmmoB:
+		TNT1 A 0 A_SpawnItem("NewMiniZorchPack")
+		Goto Death
+	SpawnAmmoC:
+		TNT1 A 0 A_SpawnItem("NewPropulsorZorchSpawnerPack")
+		Goto Death
+	SpawnAmmoD:
+		TNT1 A 0 A_SpawnItem("NewPhasingZorch")
+		Goto Death
+	SpawnAmmoE:
+		TNT1 A 0 A_SpawnItem("NewMiniZorchPack")
+		Goto Death
+	SpawnAmmoF:
+		TNT1 A 0 A_SpawnItem("NewLargeZorchRechargeSpawner")
+	Death:
+		TNT1 A 1
+		Stop
+	}
+}

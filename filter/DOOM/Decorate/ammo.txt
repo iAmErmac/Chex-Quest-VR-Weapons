@@ -1,0 +1,80 @@
+//Ammo
+
+Actor NewMiniZorchRecharge : MiniZorchRecharge
+{
+	States
+	{
+	Spawn:
+		CLIP A -1
+		Stop
+	}
+}
+Actor NewMiniZorchPack : MiniZorchPack
+{
+	States
+	{
+	Spawn:
+		AMMO A -1
+		Stop
+	}
+}
+Actor NewLargeZorchRecharge : LargeZorchRecharge
+{
+	RenderStyle "Translucent"
+	Alpha 1
+	
+	States
+	{
+	Spawn:
+		SHEL A -1
+		Stop
+	}
+}
+Actor NewLargeZorchPack : LargeZorchPack
+{	
+	States
+	{
+	Spawn:
+		SBOX A -1
+		Stop
+	}
+}
+Actor NewPropulsorZorch : PropulsorZorch
+{
+	States
+	{
+	Spawn:
+		ROCK A -1
+		Stop
+	}
+}
+Actor NewPropulsorZorchPack : PropulsorZorchPack
+{
+	States
+	{
+	Spawn:
+		BROK A -1
+		Stop
+	}
+}
+Actor NewPhasingZorch : PhasingZorch replaces Cell 2047
+{
+	States
+	{
+	Spawn:
+		CELL A -1
+		Stop
+	}
+}
+Actor NewPhasingZorchPack : PhasingZorchPack replaces CellPack 17
+{
+	States
+	{
+	Spawn:
+		CELP A -1
+		Stop
+	}
+}
+Actor NewZorchpack : Zorchpack
+{
+}

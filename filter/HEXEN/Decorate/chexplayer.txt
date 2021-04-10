@@ -1,0 +1,92 @@
+ACTOR ChexenPlayer : PlayerPawn
+{
+	Speed 1
+	Health 100
+	Radius 16
+	Height 56
+	Mass 100
+	PainChance 255
+	Player.DisplayName "Chex Warrior"
+	Player.SoundClass "chexguy"
+	Player.SpawnClass "Cleric"
+	Player.ScoreIcon "CLERFACE"
+	Player.InvulnerabilityMode "Ghost"
+	Player.HealRadiusType "Health"
+	Player.HexenArmor 10, 10, 25, 5, 20
+	Player.FlechetteType "ArtiPoisonBag1"
+	Player.CrouchSprite ""
+	Player.StartItem "NewMiniZorcher"
+	Player.StartItem "NewSuperBootspork"
+	Player.StartItem "MiniZorchRecharge", 100
+	Player.StartItem "LargeZorchRecharge", 10
+	Player.DamageScreenColor "60 b0 58"
+	Player.WeaponSlot 1, NewBootspoon, NewSuperBootspork
+	Player.WeaponSlot 2, NewMiniZorcher
+	Player.WeaponSlot 3, NewLargeZorcher, NewSuperLargeZorcher
+	Player.WeaponSlot 4, NewRapidZorcher
+	Player.WeaponSlot 5, NewZorchPropulsor
+	Player.WeaponSlot 6, NewPhasingZorcher
+	Player.WeaponSlot 7, NewLAZDevice
+	Player.ColorRange 192, 207 //Not perfect, but its better than everyone being blue.
+	Player.ColorSet 0, "Light Blue",    0xC0, 0xCF,  0xC2
+	Player.ColorSet 1, "Green",         0x70, 0x7F,  0x72
+	Player.ColorSet 2, "Gray",          0x60, 0x6F,  0x62
+	Player.ColorSet 3, "Brown",         0x40, 0x4F,  0x42
+	Player.ColorSet 4, "Red",           0x20, 0x2F,  0x22
+	Player.ColorSet 5, "Light Gray",    0x58, 0x67,  0x5A
+	Player.ColorSet 6, "Light Brown",   0x38, 0x47,  0x3A
+	Player.ColorSet 7, "Light Red",     0xB0, 0xBF,  0xB2
+	
+  States
+  {
+  Spawn:
+    CHEX A -1
+    Loop
+  See:
+    CHEX ABCD 4 
+    Loop
+  Missile:
+    CHEX E 12
+    Goto Spawn
+  Melee:
+    CHEX F 6 BRIGHT
+    Goto Missile
+  Pain:
+    CHEX G 4 
+    CHEX G 4 A_Pain
+    Goto Spawn
+  Death:
+    CHEX H 0 A_PlayerSkinCheck("AltSkinDeath")
+  Death1:
+    CHEX H 10
+    CHEX I 10 A_PlayerScream
+    CHEX J 10 A_NoBlocking
+    CHEX KLM 10
+    CHEX N -1
+    Stop
+  XDeath:
+    CHEX O 0 A_PlayerSkinCheck("AltSkinXDeath")
+  XDeath1:
+    CHEX O 5
+    CHEX P 5 A_XScream
+    CHEX Q 5 A_NoBlocking
+    CHEX RSTUV 5
+    CHEX W -1
+    Stop
+  AltSkinDeath:
+    CHEX H 6
+    CHEX I 6 A_PlayerScream
+    CHEX JK 6
+    CHEX L 6 A_NoBlocking
+    CHEX MNO 6
+    CHEX P -1
+    Stop
+  AltSkinXDeath:
+    CHEX Q 5 A_PlayerScream
+    CHEX R 0 A_NoBlocking
+    CHEX R 5 A_SkullPop
+    CHEX STUVWX 5
+    CHEX Y -1
+    Stop
+  }
+}

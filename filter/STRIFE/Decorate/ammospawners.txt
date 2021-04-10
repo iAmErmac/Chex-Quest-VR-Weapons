@@ -1,0 +1,65 @@
+
+//Ammo spawners
+
+ACTOR _ElectricBolts : ShellSpawner replaces ElectricBolts 114
+{
+	ConversationID 186
+}
+
+ACTOR _PoisonBolts : ShellBoxSpawner replaces PoisonBolts 115
+{
+	ConversationID 102
+}
+
+ACTOR _ClipOfBullets : EssentialAmmoSpawner replaces ClipOfBullets 2007
+{
+	ConversationID 179
+}
+
+ACTOR _BoxofBullets : ClipBoxSpawner replaces BoxofBullets 2048
+{
+	ConversationID 180
+}
+
+ACTOR _EnergyPod : CellSpawner replaces EnergyPod 2047
+{
+	ConversationID 183
+}
+
+ACTOR _EnergyPack : CellBoxSpawner replaces EnergyPack 17
+{
+	ConversationID 184
+}
+
+ACTOR _MiniMissiles : RocketSpawner replaces MiniMissiles 2010
+{
+	ConversationID 181
+}
+
+ACTOR _CrateOfMissiles : RocketBoxSpawner replaces CrateOfMissiles 2046
+{
+	ConversationID 182
+}
+
+ACTOR _HEGrenadeRounds : BasicAmmoSpawner replaces HEGrenadeRounds 152
+{
+	ConversationID 177
+}
+
+ACTOR _PhosphorusGrenadeRounds : AdvancedAmmoSpawner replaces PhosphorusGrenadeRounds 153
+{
+	ConversationID 178
+}
+
+
+//Item spawner
+
+Actor _AmmoFillup : ChexAmmoRefill replaces AmmoFillup
+{
+	ConversationID 298
+}
+
+Actor _AmmoSatchel : NewZorchpack replaces AmmoSatchel 183
+{
+	ConversationID 187
+}

@@ -1,0 +1,58 @@
+Model NewZorchPropulsor
+{
+	Path "models/weapons/zorchpropulsor"
+	Model 0 "ZorchPropulsor.md3"
+	Skin 0 "ZorchPropulsor.png"
+
+	Offset 4.0 -26.0 -12.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex MISG A 0 0
+	Skin 0 "ZorchPropulsor_F0.png"
+	FrameIndex MISG B 0 9
+	Skin 0 "ZorchPropulsor_F1.png"
+	FrameIndex MISG C 0 11
+	FrameIndex MISG D 0 13
+	Skin 0 "ZorchPropulsor_F2.png"
+	FrameIndex MISG E 0 14
+	FrameIndex MISG F 0 15
+	Skin 0 "ZorchPropulsor_F3.png"
+	FrameIndex MISG G 0 16
+	FrameIndex MISG H 0 17
+	Skin 0 "ZorchPropulsor_F4.png"
+	FrameIndex MISG I 0 18
+	FrameIndex MISG J 0 19
+	Skin 0 "ZorchPropulsor_F0.png"
+	FrameIndex MISG K 0 20
+	FrameIndex MISG L 0 22
+	FrameIndex MISG M 0 23
+	FrameIndex MISG N 0 24
+	FrameIndex MISG O 0 25
+	FrameIndex MISG P 0 26
+	FrameIndex MISG Q 0 27
+	FrameIndex MISG R 0 28
+	FrameIndex MISG S 0 29
+	FrameIndex MISG T 0 30
+	FrameIndex MISG U 0 31
+}
+
+//Muzzle flash
+Model NewZorchPropulsor
+{
+	Path "models/weapons/zorchpropulsor"
+	Model 0 "ZorchPropulsor_MF.md3"
+	Skin 0 "ZorchPropulsor_MF1.png"
+
+	Offset 4.0 -26.0 -12.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex MISF A 0 0
+	Skin 0 "ZorchPropulsor_MF2.png"
+	FrameIndex MISF B 0 0
+	Skin 0 "ZorchPropulsor_MF3.png"
+	FrameIndex MISF C 0 0
+	Skin 0 "ZorchPropulsor_MF3.png"
+	FrameIndex MISF D 0 0
+}

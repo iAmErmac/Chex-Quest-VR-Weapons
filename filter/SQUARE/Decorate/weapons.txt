@@ -1,0 +1,104 @@
+//Weapons
+
+Actor SporkSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewSuperBootspork",1)
+		Stop
+	}
+}
+
+Actor BetterMiniZorcher : MiniZorcher
+{
+  States
+  {
+  Fire:
+    PISG BCD 1
+    PISG E 3 A_FireBullets (2, 0, 1, 6, "BulletPuff")
+    PISG E 0 A_PlaySound("weapons/pistol", CHAN_WEAPON)
+    PISG E 0 A_GunFlash
+    PISG DC 2
+    PISG B 2 A_ReFire
+    Goto Ready
+  }
+}
+
+Actor MiniZorcherSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("BetterMiniZorcher",1)
+		Stop
+	}
+}
+
+Actor LarzeZorcherSpawner
+{  
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItem("NewLargeZorcherClipBracket",1)
+		TNT1 A 1 A_SpawnItem("NewLargeZorcher",1)
+		Stop
+	}
+}
+
+Actor SuperLarzeZorcherSpawner
+{  
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItem("NewLargeZorcherClipBracket",1)
+		TNT1 A 1 A_SpawnItem("NewSuperLargeZorcher",1)
+		Stop
+	}
+}
+
+Actor RapidZorcherSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewRapidZorcher",1)
+		Stop
+	}
+}
+
+Actor ZorchPropulsorSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewZorchPropulsor",1)
+		Stop
+	}
+}
+
+Actor PhasingZorcherSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewPhasingZorcher",1)
+		Stop
+	}
+}
+
+Actor LAZDeviceSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewLAZDevice",1)
+		Stop
+	}
+}

@@ -1,0 +1,15 @@
+
+//Ammo overrides
+#include "Decorate/ammo.txt"
+
+//Ammo overrides
+#include "Decorate/ammospawners.txt"
+
+//Weapon overrides
+#include "Decorate/weapons.txt"
+
+//Weapon spawner
+#include "Decorate/weaponspawners.txt"
+
+//Weapon spawner
+#include "Decorate/chexplayer.txt"

@@ -1,0 +1,66 @@
+
+Model NewRapidZorcher
+{
+	Path "models/weapons/rapidzorcher"
+	Model 0 "RapidZorcher.md3"
+	SurfaceSkin 0 0 "RapidZorcher.png"
+	SurfaceSkin 0 1 "RapidZorcher.png"
+	SurfaceSkin 0 2 "meter_r.png"
+	SurfaceSkin 0 3 "meter_g.png"
+	SurfaceSkin 0 4 "meter_g.png"
+	SurfaceSkin 0 5 "meter_g.png"
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	//Ready
+	FrameIndex CHGG A 0 0
+	
+	//Fire
+	FrameIndex CHGG B 0 1
+	SurfaceSkin 0 0 "RapidZorcher_F.png"
+	SurfaceSkin 0 1 "RapidZorcher_F.png"
+	SurfaceSkin 0 3 "meter_r.png"
+	SurfaceSkin 0 4 "meter_r.png"
+	SurfaceSkin 0 5 "meter_r.png"
+	FrameIndex CHGG C 0 2
+	FrameIndex CHGG D 0 3
+	FrameIndex CHGG E 0 4
+	FrameIndex CHGG F 0 5
+	FrameIndex CHGG G 0 6
+	FrameIndex CHGG H 0 7
+	FrameIndex CHGG I 0 8
+	FrameIndex CHGG J 0 9
+	
+	//Hold fire
+	FrameIndex CHGG K 0 10
+	FrameIndex CHGG L 0 11
+	FrameIndex CHGG M 0 12
+	FrameIndex CHGG N 0 13
+	FrameIndex CHGG O 0 14
+	FrameIndex CHGG P 0 15
+	FrameIndex CHGG Q 0 16
+	FrameIndex CHGG R 0 17
+	FrameIndex CHGG S 0 18
+	FrameIndex CHGG T 0 19
+	FrameIndex CHGG U 0 20
+	FrameIndex CHGG V 0 21
+}
+
+//Muzzle flash
+Model NewRapidZorcher
+{
+	Path "models/weapons/rapidzorcher"
+	Model 0 "RapidZorcher_MF.md3"
+	Skin 0 "RapidZorcher_MF1.png"
+
+	Offset 1.0 -27.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex CHGF A 0 0
+	Skin 0 "RapidZorcher_MF2.png"
+	FrameIndex CHGF B 0 0
+	Skin 0 "RapidZorcher_MF3.png"
+	FrameIndex CHGF C 0 0 
+}

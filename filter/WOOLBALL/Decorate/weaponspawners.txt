@@ -1,0 +1,37 @@
+//Weapon spawner
+
+ACTOR _Chainsaw : SporkSpawner replaces SuperFistNew 2005
+{
+}
+
+ACTOR _Pistol : MiniZorcherSpawner replaces PistolNew 5010
+{
+}
+
+ACTOR _Pistol2 : _Pistol replaces LowResPistolNew
+{
+}
+
+ACTOR _Shotgun : RandomSpawner replaces ShotgunNew 2001
+{
+	DropItem "LarzeZorcherSpawner", 256, 4
+	DropItem "SuperLarzeZorcherSpawner", 256, 1
+}
+
+ACTOR _Shotgun2 : _Shotgun replaces LowResShotgunNew 82
+{
+}
+
+ACTOR _ChainGun : RapidZorcherSpawner replaces ChaingunNew 2002
+{
+}
+
+ACTOR _RocketLauncher : ZorchPropulsorSpawner replaces RocketLauncherNew 2003
+{
+}
+
+ACTOR _PlasmaRifle : RandomSpawner replaces PewpRifle 2004
+{
+	DropItem "PhasingZorcherSpawner", 256, 9
+	DropItem "LAZDeviceSpawner", 256, 1
+}

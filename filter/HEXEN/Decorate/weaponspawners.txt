@@ -1,0 +1,80 @@
+
+//Weapon spawner
+
+ACTOR _FWeapAxe : RapidZorcherSpawner replaces FWeapAxe 8010
+{
+}
+
+ACTOR _CWeapStaff : RapidZorcherSpawner replaces CWeapStaff 10
+{
+}
+
+ACTOR _MWeapFrost : RapidZorcherSpawner replaces MWeapFrost 53
+{
+}
+
+ACTOR _FWeapHammer : ZorchPropulsorSpawner replaces FWeapHammer 123
+{
+}
+
+ACTOR _CWeapFlame : ZorchPropulsorSpawner replaces CWeapFlame 8009
+{
+}
+
+ACTOR _MWeapLightning : ZorchPropulsorSpawner replaces MWeapLightning 8040
+{
+}
+
+ACTOR _FWeaponPiece1 : PhasingZorcherSpawner replaces FWeaponPiece1 12
+{
+}
+
+ACTOR _FWeaponPiece2 : LAZDeviceSpawner replaces FWeaponPiece2 13
+{
+}
+
+ACTOR _FWeaponPiece3 : RandomSpawner replaces FWeaponPiece3 16
+{
+	DropItem "PhasingZorcherSpawner"
+	DropItem "LAZDeviceSpawner"
+}
+
+ACTOR _CWeaponPiece1 : PhasingZorcherSpawner replaces CWeaponPiece1 18
+{
+}
+
+ACTOR _CWeaponPiece2 : LAZDeviceSpawner replaces CWeaponPiece2 19
+{
+}
+
+ACTOR _CWeaponPiece3 : RandomSpawner replaces CWeaponPiece3 20
+{
+	DropItem "PhasingZorcherSpawner"
+	DropItem "LAZDeviceSpawner"
+}
+
+ACTOR _MWeaponPiece1 : PhasingZorcherSpawner replaces MWeaponPiece1 21
+{
+}
+
+ACTOR _MWeaponPiece2 : LAZDeviceSpawner replaces MWeaponPiece2 22
+{
+}
+
+ACTOR _MWeaponPiece3 : RandomSpawner replaces MWeaponPiece3 23
+{
+	DropItem "PhasingZorcherSpawner"
+	DropItem "LAZDeviceSpawner"
+}
+
+ACTOR _FWeapQuietus : LAZDeviceSpawner replaces FWeapQuietus
+{
+}
+
+ACTOR _CWeapWraithverge : LAZDeviceSpawner replaces CWeapWraithverge
+{
+}
+
+ACTOR _MWeapBloodscourge : LAZDeviceSpawner replaces MWeapBloodscourge
+{
+}

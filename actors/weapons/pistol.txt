@@ -1,0 +1,34 @@
+ACTOR NewMiniZorcher : MiniZorcher replaces MiniZorcher
+{
+  States
+  {
+  Ready:
+    PISG A 1 A_WeaponReady
+    Loop
+  Deselect:
+    PISG A 1 A_Lower
+    Loop
+  Select:
+    PISG A 1 A_Raise
+    Loop
+  Fire:
+    PISG BCD 2
+    PISG E 4 A_FirePistol
+    PISG DC 2
+    PISG B 5 A_ReFire
+    Goto Ready
+  Flash:
+    PISF A 7 Bright A_Light1
+    Goto LightDone
+    PISF A 7 Bright A_Light1
+    Goto LightDone
+  Spawn:
+    MINZ A -1 Bright
+    Stop
+  }
+}
+
+ACTOR SilencedMiniZorcher : NewMiniZorcher
+{
+  +NOALERT
+}

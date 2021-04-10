@@ -1,0 +1,11 @@
+#include "actors/weapons/fist.txt"
+#include "actors/weapons/chainsaw.txt"
+#include "actors/weapons/pistol.txt"
+#include "actors/weapons/shotgun.txt"
+#include "actors/weapons/ssg.txt"
+#include "actors/weapons/chaingun.txt"
+#include "actors/weapons/rocketlauncher.txt"
+#include "actors/weapons/plasmagun.txt"
+#include "actors/weapons/bfg.txt"
+
+#include "actors/chexplayer.txt"

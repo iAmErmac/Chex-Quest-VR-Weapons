@@ -1,0 +1,5 @@
+Gameinfo
+{
+	Playerclasses = "NewChexPlayer"
+	EventHandlers = "NPCNoDeath"
+}

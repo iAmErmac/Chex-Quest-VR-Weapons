@@ -1,0 +1,72 @@
+
+//Ammo spawner
+
+Actor _GoldWandAmmo : RandomSpawner replaces GoldWandAmmo 10
+{
+	DropItem "MiniZorchRechargeSpawner"
+}
+
+Actor _GoldWandHefty : RandomSpawner replaces GoldWandHefty 12
+{
+	DropItem "NewMiniZorchPack"
+}
+
+Actor _CrossbowAmmo : RandomSpawner replaces CrossbowAmmo 18
+{
+	DropItem "NewLargeZorchRechargeSpawner"
+}
+
+Actor _CrossbowHefty : RandomSpawner replaces CrossbowHefty 19
+{
+	DropItem "NewLargeZorchPack"
+}
+
+Actor _BlasterAmmo : RandomSpawner replaces BlasterAmmo 54
+{
+	DropItem "NewMiniZorchPack", 256, 2
+	DropItem "NewLargeZorchRechargeSpawner", 256, 1
+}
+
+Actor _BlasterHefty : RandomSpawner replaces BlasterHefty 55
+{
+	DropItem "NewLargeZorchPack", 256, 2
+	DropItem "NewPropulsorZorchSpawner", 256, 1
+}
+
+Actor _SkullRodAmmo : RandomSpawner replaces SkullRodAmmo 20
+{
+	DropItem "NewPhasingZorch"
+}
+
+Actor _SkullRodHefty : RandomSpawner replaces SkullRodHefty 21
+{
+	DropItem "NewPhasingZorchPack"
+}
+
+Actor _PhoenixRodAmmo : RandomSpawner replaces PhoenixRodAmmo 22
+{
+	DropItem "NewPropulsorZorchSpawner"
+}
+
+Actor _PhoenixRodHefty : RandomSpawner replaces PhoenixRodHefty 23
+{
+	DropItem "NewPropulsorZorchPack"
+}
+
+Actor _MaceAmmo : RandomSpawner replaces MaceAmmo 13
+{
+	DropItem "NewPropulsorZorchSpawner"
+	DropItem "NewPhasingZorch"
+}
+
+Actor _MaceHefty : RandomSpawner replaces MaceHefty 16
+{
+	DropItem "NewPropulsorZorchPack"
+	DropItem "NewPhasingZorchPack"
+}
+
+Actor _BagOfHolding : RandomSpawner replaces BagOfHolding 8
+{
+	DropItem "NewZorchpack"
+}
+

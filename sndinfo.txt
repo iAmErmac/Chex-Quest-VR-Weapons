@@ -1,0 +1,71 @@
+ChexPlayerNormalDeath         dspldeth
+ChexPlayerCrazyDeath          dspldeth
+ChexPlayerExtreme1Death       dsslop
+ChexPlayerPain                dsplpain
+ChexPlayerGrunt               dsoof
+ChexPlayerFallingScream       dsslop
+ChexPlayerBurnDeath           dspldeth
+ChexPlayerFailedUse           dsnoway
+
+$playeralias chexguy male *death ChexPlayerNormalDeath
+$playeralias chexguy male *crazydeath ChexPlayerCrazyDeath
+$playeralias chexguy male *burndeath ChexPlayerBurnDeath
+$playeralias chexguy male *xdeath ChexPlayerExtreme1Death
+$playeralias chexguy male *pain100 ChexPlayerPain
+$playeralias chexguy male *pain75 ChexPlayerPain
+$playeralias chexguy male *pain50 ChexPlayerPain
+$playeralias chexguy male *pain25 ChexPlayerPain
+$playeralias chexguy male *grunt ChexPlayerGrunt
+$playeralias chexguy male *poison ChexPlayerPain
+$playeralias chexguy male *falling ChexPlayerFallingScream
+$playeralias chexguy male *splat ChexPlayerExtreme1Death
+$playeralias chexguy male *usefail ChexPlayerFailedUse
+$playeralias chexguy male *puzzfail ChexPlayerFailedUse
+
+MonsterDeathVanish0		dthpoof0	
+MonsterDeathVanish1		dthpoof1
+MonsterDeathVanish2		dthpoof2
+MonsterDeathVanish3		dthpoof3
+MonsterDeathVanish4		dthpoof4
+MonsterDeathVanish5		dthpoof5
+MonsterDeathVanish6		dthpoof6
+MonsterDeathVanish7		dthpoof7
+MonsterDeathVanish8		dthpoof8
+MonsterDeathVanish9		dthpoof9
+
+//
+// Weapons
+//
+
+$pitchshiftrange 3
+weapons/sawup			dssawup
+weapons/sawidle			dssawidl
+weapons/sawfull			dssawful
+weapons/sawhit			dssawhit
+$pitchshiftrange 4
+
+weapons/pistol			dspistol
+weapons/shotgf			dsshotgn
+weapons/shotgr			dssgcock
+weapons/sshotf			dsdshtgn
+weapons/sshoto			dsdbopn
+weapons/sshotc			dsdbcls
+weapons/sshotl			dsdbload
+weapons/chngun			dspistol
+weapons/rocklx			dsrxplod
+weapons/rocklf			dsrlaunc
+weapons/plasmaf			dsplasma
+weapons/plasmax			dsfirxpl
+weapons/bfgf			dsbfg
+weapons/bfgx			dsrxplod
+
+//===========================================================================
+//
+// MISCELLANEOUS SOUNDS
+//
+//===========================================================================
+
+misc/w_pkup			dswpnup		// Pickup weapon
+misc/p_pkup			dsgetpow	// Pickup powerup
+misc/i_pkup			dsitemup	// Pickup item
+misc/k_pkup			dsitemup	// Pickup key

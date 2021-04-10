@@ -1,0 +1,34 @@
+Model NewBootspoon
+{
+	Path "models/weapons/spoon"
+	Model 0 "spoon.md3"
+	Skin 0 "spoon.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -5
+
+	FrameIndex PUNG A 0 0
+	FrameIndex PUNG B 0 3
+	FrameIndex PUNG C 0 5
+	FrameIndex PUNG D 0 7
+	FrameIndex PUNG E 0 9
+	FrameIndex PUNG F 0 11
+}
+
+Model NewBootspoon
+{
+	Path "models/weapons/spoon"
+	Model 0 "spoon_mf.md3"
+	Skin 0 "spoon_mf1.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -5
+
+	FrameIndex PUNF A 0 0
+	Skin 0 "spoon_mf2.png"
+	FrameIndex PUNF B 0 0
+	Skin 0 "spoon_mf3.png"
+	FrameIndex PUNF C 0 0
+}

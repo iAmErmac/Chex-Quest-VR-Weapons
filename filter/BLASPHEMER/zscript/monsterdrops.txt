@@ -1,0 +1,613 @@
+class MonsterNoDeath : EventHandler
+{
+	override void WorldThingDied(WorldEvent e)
+	{
+		if ( e.thing.bIsMonster )
+		{
+			e.thing.A_SpawnItemEx("MonsterPoofFlash");
+			e.thing.A_HideThing();
+			
+			//estimating monster through health and dropping items accordingly
+			 if(e.thing.SpawnHealth() <= 10){
+				//Console.printf("Chicken");
+			 }
+			 if(e.thing.SpawnHealth() <= 20){
+				//Console.printf("Zombieman or Hobo");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner");
+			 }
+			 if(e.thing.SpawnHealth() <= 25){
+				//Console.printf("Pig");
+			 }
+			 else if(e.thing.SpawnHealth() <= 30){
+				//Console.printf("Shotgunner");
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner");
+				e.thing.A_SpawnProjectile("ShotgunItemDropSpawner", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 31){
+				//Console.printf("Strife peasant or zombie");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 16);
+			 }
+			 else if(e.thing.SpawnHealth() <= 40){
+				//Console.printf("Heretic Gargoyle");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 16);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 16);
+			 }
+			 else if(e.thing.SpawnHealth() <= 50){
+				//Console.printf("Nazi");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner");
+			 }
+			 else if(e.thing.SpawnHealth() <= 60){
+				//Console.printf("Imp or Green-Blue acolyte");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 8);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 8);
+			 }
+			 else if(e.thing.SpawnHealth() <= 61){
+				//Console.printf("Transforming acolyte");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 8);
+			 }
+			 else if(e.thing.SpawnHealth() <= 68){
+				//Console.printf("Burried wraith");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 8);
+			 }
+			 else if(e.thing.SpawnHealth() <= 70){
+				//Console.printf("Chaingunner or Acolyte");
+				e.thing.A_DropItem("NewMiniZorchPack");
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 80){
+				//Console.printf("Heretic Mummy or Hexen gargoyle or Strife Stalker");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 16);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 16);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner8", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 90){
+				//Console.printf("Serpent");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 16);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 16);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner8", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 100 && e.Thing.GetSpecies() == "LostSoul"){
+				//Console.printf("Lost Soul");
+			 }
+			 else if(e.thing.SpawnHealth() <= 100){
+				//Console.printf("Heretic Mummy Leader or Strife Sentinel or Chex Flembrane");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 32);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner16", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 120){
+				//Console.printf("Ice golem");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 32);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner8", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 125){
+				//Console.printf("Strife turret");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 64);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner16", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 130){
+				//Console.printf("Bishop");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 32);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 32);
+			 }
+			 else if(e.thing.SpawnHealth() <= 150){
+				//Console.printf("Demon or Wraith or strife Reaver or chex Cycloptis");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 32);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 32);
+			 }
+			 else if(e.thing.SpawnHealth() <= 175){
+				//Console.printf("Ettin");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 128);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 64);
+			 }
+			 else if(e.thing.SpawnHealth() <= 180){
+				//Console.printf("Heretic Wizard");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 32);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 16);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 16);
+			 }
+			 else if(e.thing.SpawnHealth() <= 200){
+				//Console.printf("Heretic Knight or Hexen sentaur or Serpent leader");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 16);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 16);
+			 }
+			 else if(e.thing.SpawnHealth() <= 225){
+				//Console.printf("Chex Stridicus");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 16);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 16);
+			 }
+			 else if(e.thing.SpawnHealth() <= 220){
+				//Console.printf("Heretic Beast");
+				e.thing.A_DropItem("MiniZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 16);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 16);
+			 }
+			 else if(e.thing.SpawnHealth() <= 250){
+				//Console.printf("Sentaur leader or chaos serpent");
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 192);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+			 }
+			 else if(e.thing.SpawnHealth() <= 280){
+				//Console.printf("Heretic Snake");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 32);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+			 }
+			 else if(e.thing.SpawnHealth() <= 300){
+				//Console.printf("Revenant or Strife templar");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 64);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 400){
+				//Console.printf("Caco or Pain elemental or Crusader");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 8);
+			 }
+			 else if(e.thing.SpawnHealth() <= 500){
+				//Console.printf("Hell Knight or Aracnotron or Strife Bishop");
+				e.thing.A_DropItem("NewLargeZorchRechargeSpawner", -1, 64);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 64);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 600){
+				//Console.printf("Mancubus");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 128);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 16);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 640){
+				//Console.printf("Death wyvern");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 64);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 16);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 16);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 16);
+			 }
+			 else if(e.thing.SpawnHealth() <= 700){
+				//Console.printf("Archvile or Ironlich");
+				e.thing.A_DropItem("NewPhasingZorch", -1, 128);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 64);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 16);
+				e.thing.A_DropItem("NewZorchpack", 1, 8);
+			 }
+			 else if(e.thing.SpawnHealth() <= 800){
+				//Console.printf("Hexen mirror boss or Loremaster");
+				e.thing.A_DropItem("NewPhasingZorch", -1, 192);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 128);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 128);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 64);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 32);
+				e.thing.A_DropItem("NewZorchpack", 1, 16);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 990){
+				//Console.printf("Revived sigil entity");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 64);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 16);
+				e.thing.A_DropItem("NewZorchpack", 1, 8);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 1000){
+				//Console.printf("Baron or Alien Spectre or Inquisitor");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 64);
+				e.thing.A_DropItem("NewPhasingZorch", -1, 64);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 16);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 16);
+				e.thing.A_DropItem("NewZorchpack", 1, 8);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 1100){
+				//Console.printf("Strife Programmer");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 32);
+				e.thing.A_DropItem("NewPhasingZorch", -1, 32);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 16);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 16);
+				e.thing.A_DropItem("NewZorchpack", 1, 8);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 1200){
+				//Console.printf("Spectre Bishop");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 128);
+				e.thing.A_DropItem("NewPhasingZorch", -1, 128);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 16);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 16);
+				e.thing.A_DropItem("NewZorchpack", 1, 32);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 1500){
+				//Console.printf("Spectre Oracle");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 128);
+				e.thing.A_DropItem("NewPhasingZorch", -1, 128);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 16);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 16);
+				e.thing.A_DropItem("NewZorchpack", 1, 32);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 1700){
+				//Console.printf("Spectre Macil");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 128);
+				e.thing.A_DropItem("NewPhasingZorch", -1, 128);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 64);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 16);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 16);
+				e.thing.A_DropItem("NewZorchpack", 1, 32);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 2000){
+				//Console.printf("Snakerider D'Sparil or Spectre Loremaster");
+				e.thing.A_DropItem("NewPropulsorZorchSpawner", -1, 128);
+				e.thing.A_DropItem("NewPhasingZorch", -1, 192);
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 96);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 64);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 32);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 128);
+				e.thing.A_DropItem("NewZorchpack", 1, 32);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("BFGItemDropSpawner16", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 2500){
+				//Console.printf("Sigil entity");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 128);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 96);
+				e.thing.A_DropItem("NewPropulsorZorchPack");
+				e.thing.A_DropItem("NewPhasingZorchPack");
+				e.thing.A_DropItem("NewPhasingZorchPack");
+				e.thing.A_DropItem("NewZorchpack", 1, 128);
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("BFGItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 3000){
+				//Console.printf("Spider Mastermind or Minotaur");
+				e.thing.A_DropItem("NewMiniZorchPack");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 128);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 128);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 96);
+				e.thing.A_DropItem("NewPhasingZorchPack");
+				e.thing.A_DropItem("NewZorchpack", 1, 128);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner128", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("BFGItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 3500){
+				//Console.printf("D'Sparil");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 128);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 128);
+				e.thing.A_DropItem("NewPropulsorZorchPack");
+				e.thing.A_DropItem("NewPhasingZorchPack");
+				e.thing.A_DropItem("NewPhasingZorchPack");
+				e.thing.A_DropItem("NewZorchpack", 1, 128);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner128", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("BFGItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 4000){
+				//Console.printf("Cyberdemon");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 128);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 128);
+				e.thing.A_DropItem("NewPropulsorZorchPack");
+				e.thing.A_DropItem("NewPropulsorZorchPack");
+				e.thing.A_DropItem("NewPhasingZorchPack");
+				e.thing.A_DropItem("NewZorchpack", 1, 128);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner192", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("BFGItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else if(e.thing.SpawnHealth() <= 5000){
+				//Console.printf("Heresiarch or Korax");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 128);
+				e.thing.A_DropItem("NewLargeZorchPack");
+				e.thing.A_DropItem("NewPropulsorZorchPack");
+				e.thing.A_DropItem("NewPropulsorZorchPack");
+				e.thing.A_DropItem("NewPhasingZorchPack");
+				e.thing.A_DropItem("NewPhasingZorchPack");
+				e.thing.A_DropItem("NewZorchpack", 1, 128);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner32", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner192", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner128", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("BFGItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 else {
+				//Console.printf("Cannot detect monster");
+				e.thing.A_DropItem("NewMiniZorchPack", -1, 128);
+				e.thing.A_DropItem("NewLargeZorchPack", -1, 128);
+				e.thing.A_DropItem("NewPropulsorZorchPack", -1, 128);
+				e.thing.A_DropItem("NewPhasingZorchPack", -1, 128);
+				e.thing.A_DropItem("NewZorchpack", 1, 128);
+				e.thing.A_SpawnProjectile("ChaingunItemDropSpawner128", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("RocketLauncherItemDropSpawner128", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("PlasmaGunItemDropSpawner128", Random(10, 30), Random(-3, 3), Random(-90, 90));
+				e.thing.A_SpawnProjectile("BFGItemDropSpawner64", Random(10, 30), Random(-3, 3), Random(-90, 90));
+			 }
+			 
+			e.thing.A_Remove(AAPTR_DEFAULT);
+		}
+	}
+}
+
+class MonsterPoofFlash : Actor
+{
+	Default
+	{
+		+NOGRAVITY;
+	}
+	States
+	{
+		Spawn:
+			POOF A 0 A_Jump(128, "Vanish1");
+			POOF A 0 A_Jump(128, "Vanish2");
+			POOF A 0 A_Jump(64, "Vanish3");
+			POOF A 0 A_Jump(64, "Vanish4");
+			POOF A 0 A_Jump(64, "Vanish5");
+			POOF A 0 A_Jump(64, "Vanish6");
+			POOF A 0 A_Jump(32, "Vanish7");
+			POOF A 0 A_Jump(64, "Vanish8");
+			POOF A 0 A_Jump(32, "Vanish9");
+			POOF A 0 A_PlaySound("MonsterDeathVanish0");
+			POOF ABC 8 Bright A_Light(20);
+			Stop;
+		Vanish1:
+			POOF A 0 A_PlaySound("MonsterDeathVanish1");
+			POOF ABC 8 Bright A_Light(20);
+			Stop;
+		Vanish2:
+			POF2 A 0 A_PlaySound("MonsterDeathVanish2");
+			POF2 ABCD 8 Bright A_Light(20);
+			Stop;
+		Vanish3:
+			POF3 A 0 A_PlaySound("MonsterDeathVanish3");
+			POF3 ABCDE 8 Bright A_Light(20);
+			Stop;
+		Vanish4:
+			POF2 A 0 A_PlaySound("MonsterDeathVanish4");
+			POF2 ABCD 8 Bright A_Light(20);
+			Stop;
+		Vanish5:
+			POOF A 0 A_PlaySound("MonsterDeathVanish5");
+			POOF ABC 8 Bright A_Light(20);
+			Stop;
+		Vanish6:
+			POOF A 0 A_PlaySound("MonsterDeathVanish6");
+			POOF ABC 8 Bright A_Light(20);
+			Stop;
+		Vanish7:
+			POF3 A 0 A_PlaySound("MonsterDeathVanish7");
+			POF3 ABCDE 8 Bright A_Light(20);
+			Stop;
+		Vanish8:
+			POF2 A 0 A_PlaySound("MonsterDeathVanish8");
+			POF2 ABCD 8 Bright A_Light(20);
+			Stop;
+		Vanish9:
+			POF3 A 0 A_PlaySound("MonsterDeathVanish9");
+			POF3 ABCDE 8 Bright A_Light(20);
+			Stop;
+	}
+}
+
+Class MonsterDeathItemDropSpawner : Actor
+{
+	Default
+	{
+		Radius 1;
+		Height 1;
+		Speed 5;
+		PROJECTILE;
+		+NOCLIP;
+	}
+}
+
+Class ShotgunItemDropSpawner : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+	  TNT1 A 0 A_jump(64, "DropShotgun");
+	  Stop;
+   DropShotgun:
+      TNT1 A 0 A_SpawnItemEx("NewLargeZorcherClipBracket");
+      TNT1 A 0 A_SpawnItemEx("LargeZorcher");
+      stop;
+   }
+}
+
+Class ChaingunItemDropSpawner128 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("RapidZorcher", -1, 128);
+      stop;
+   }
+}
+
+Class ChaingunItemDropSpawner64 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("RapidZorcher", -1, 64);
+      stop;
+   }
+}
+
+Class ChaingunItemDropSpawner32 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("RapidZorcher", -1, 32);
+      stop;
+   }
+}
+
+Class ChaingunItemDropSpawner16 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("RapidZorcher", -1, 16);
+      stop;
+   }
+}
+
+Class ChaingunItemDropSpawner8 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("RapidZorcher", -1, 8);
+      stop;
+   }
+}
+
+Class RocketLauncherItemDropSpawner192 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("ZorchPropulsor", -1, 192);
+      stop;
+   }
+}
+
+Class RocketLauncherItemDropSpawner128 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("ZorchPropulsor", -1, 128);
+      stop;
+   }
+}
+
+Class RocketLauncherItemDropSpawner64 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("ZorchPropulsor", -1, 64);
+      stop;
+   }
+}
+
+Class RocketLauncherItemDropSpawner32 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("ZorchPropulsor", -1, 32);
+      stop;
+   }
+}
+
+Class PlasmaGunItemDropSpawner128 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("NewPhasingZorcher", -1, 128);
+      stop;
+   }
+}
+
+Class PlasmaGunItemDropSpawner64 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("NewPhasingZorcher", -1, 64);
+      stop;
+   }
+}
+
+Class PlasmaGunItemDropSpawner32 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("NewPhasingZorcher", -1, 32);
+      stop;
+   }
+}
+
+Class BFGItemDropSpawner64 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("LAZDevice", -1, 64);
+      stop;
+   }
+}
+
+Class BFGItemDropSpawner16 : MonsterDeathItemDropSpawner
+{
+   States
+   {
+   Spawn:
+      TNT1 A 10;
+      TNT1 A 0 A_Stop;
+      TNT1 A 0 A_DropItem("LAZDevice", -1, 16);
+      stop;
+   }
+}

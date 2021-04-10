@@ -1,0 +1,31 @@
+//Weapons
+
+ACTOR _Gauntlets : SporkSpawner replaces Gauntlets 2005
+{
+}
+
+ACTOR _GoldWand : MiniZorcherSpawner replaces GoldWand //9042
+{
+}
+
+ACTOR _Crossbow : RandomSpawner replaces Crossbow 2001
+{
+	DropItem "LarzeZorcherSpawner", 256, 4
+	DropItem "SuperLarzeZorcherSpawner", 256, 1
+}
+
+ACTOR _Blaster : RapidZorcherSpawner replaces Blaster 53
+{
+}
+
+ACTOR _SkullRod : PhasingZorcherSpawner replaces SkullRod 2004
+{
+}
+
+ACTOR _PhoenixRod : ZorchPropulsorSpawner replaces PhoenixRod 2003
+{
+}
+
+ACTOR _Mace : LAZDeviceSpawner replaces Mace
+{
+}

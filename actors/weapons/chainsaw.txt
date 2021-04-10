@@ -1,0 +1,41 @@
+ACTOR NewSuperBootspork : SuperBootspork replaces SuperBootspork
+{
+  States
+  {
+  Ready:
+    SAWG ABCDEFGH 1 A_WeaponReady
+    Loop
+  Deselect:
+    SAWG A 1 A_Lower
+    Loop
+  Select:
+    SAWG A 1 A_Raise
+    Loop
+  Fire:
+    SAWF A 1 A_GunFlash
+    SAWF BCDEFGH 1 A_Saw
+  Hold:
+	SAWH A 0 A_GiveInventory("SporkGrindMode",1)
+    SAWH A 1 A_GunFlash
+    SAWH BCDEFGH 1 A_Saw
+    SAWH A 0 A_ReFire
+	SAWH A 0 A_TakeInventory("SporkGrindMode",1)
+    Goto Ready
+  Flash:
+	SWFF A 0 A_JumpIfInventory("SporkGrindMode",1,"HoldFlash")
+    SWFF ABCDEFG 1 Bright
+	Stop
+  HoldFlash:
+    SWHF ABCDEFGH 2 Bright
+	Stop
+  Spawn:
+    CSAW A -1 Bright
+    Stop
+  }
+}
+
+actor SporkGrindMode : Inventory
+{
+  inventory.amount 0
+  inventory.maxamount 1
+}

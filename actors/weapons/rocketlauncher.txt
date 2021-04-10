@@ -1,0 +1,58 @@
+ACTOR NewZorchPropulsor : ZorchPropulsor replaces ZorchPropulsor
+{
+  States
+  {
+  Ready:
+    MISG A 1 A_WeaponReady
+    Loop
+  Deselect:
+    MISG A 1 A_Lower
+    Loop
+  Select:
+    MISG A 1 A_Raise
+    Loop
+  Fire:
+    MISG BCDEFGH 1
+    MISG I 1 A_GunFlash
+    MISG JKLMNOPQRST 1
+    MISG U 1 A_FireCustomMissile("NewPropulsorMissile")
+    MISG U 0 A_ReFire
+    Goto Ready
+  Flash:
+    MISF A 3 Bright A_Light1
+    MISF B 4 Bright
+    MISF CD 4 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    LAUN A -1 Bright
+    Stop
+  }
+}
+
+ACTOR NewPropulsorMissile : Rocket
+{
+  Radius 11
+  Height 8
+  Speed 20
+  Damage 20
+  Projectile
+  +RANDOMIZE
+  SeeSound "weapons/rocklf"
+  DeathSound "weapons/rocklx"
+  -ROCKETTRAIL
+  -DEHEXPLOSION
+  RenderStyle Translucent
+  Obituary "$OB_MPPROPULSOR" // "%o was zorched by %k's propulsor."
+  Alpha 0.75
+  States
+  {
+  Spawn:
+    PMSL A 1 Bright
+    Loop
+  Death:
+    PMSL B 8 Bright A_Explode
+    PMSL C 6 Bright
+    PMSL D 4 Bright
+    Stop
+  }
+}

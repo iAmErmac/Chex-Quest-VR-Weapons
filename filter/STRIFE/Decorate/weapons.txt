@@ -1,0 +1,118 @@
+
+//Weapons
+
+Actor SporkSpawner : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewSuperBootspork",1)
+		Stop
+	}
+}
+
+Actor MiniZorcherSilenced : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("SilencedMiniZorcher",1)
+		Stop
+	Pickup:
+		TNT1 A 0
+		TNT1 A 1 A_GiveInventory("SilencedMiniZorcher",1)
+		TNT1 A 1 A_TakeInventory("NewMiniZorcher",1) //Silenced version replaces the original pistol
+		Stop
+	}
+}
+
+Actor LargeZorcherSpawner : CustomInventory
+{  
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItem("NewLargeZorcherClipBracket",1)
+		TNT1 A 1 A_SpawnItem("NewLargeZorcher",1)
+		Stop
+	Pickup:
+		TNT1 A 0
+		TNT1 A 1 A_GiveInventory("NewLargeZorcher",1)
+		TNT1 A 1 A_GiveInventory("NewLargeZorchPack",20)
+		Stop
+	}
+}
+
+Actor SuperLargeZorcherSpawner : CustomInventory
+{  
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItem("NewLargeZorcherClipBracket",1)
+		TNT1 A 1 A_SpawnItem("NewSuperLargeZorcher",1)
+		Stop
+	Pickup:
+		TNT1 A 1 A_GiveInventory("NewSuperLargeZorcher",1)
+		Stop
+	}
+}
+
+Actor RapidZorcherSpawner : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewRapidZorcher",1)
+		Stop
+	Pickup:
+		TNT1 A 0
+		TNT1 A 1 A_GiveInventory("NewRapidZorcher",1)
+		TNT1 A 1 A_GiveInventory("NewMiniZorchRecharge",50)
+		Stop
+	}
+}
+
+Actor ZorchPropulsorSpawner : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewZorchPropulsor",1)
+		Stop
+	Pickup:
+		TNT1 A 0
+		TNT1 A 1 A_GiveInventory("NewZorchPropulsor",1)
+		TNT1 A 1 A_GiveInventory("NewPropulsorZorchPack",5)
+		Stop
+	}
+}
+
+Actor PhasingZorcherSpawner : CustomInventory
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewPhasingZorcher",1)
+		Stop
+	Pickup:
+		TNT1 A 0
+		TNT1 A 1 A_GiveInventory("NewPhasingZorcher",1)
+		TNT1 A 1 A_GiveInventory("NewPropulsorZorchPack",5)
+		Stop
+	}
+}
+
+Actor LAZDeviceSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewLAZDevice",1)
+		Stop
+	}
+}

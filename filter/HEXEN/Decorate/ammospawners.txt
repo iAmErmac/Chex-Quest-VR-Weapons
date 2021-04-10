@@ -1,0 +1,27 @@
+
+//Ammo spawner
+
+Actor _Mana1 : RandomSpawner replaces Mana1 122
+{
+	DropItem "MiniZorchRechargeSpawner"
+	DropItem "NewLargeZorchRechargeSpawner"
+}
+
+Actor _Mana2 : RandomSpawner replaces Mana2 124
+{
+	DropItem "NewPhasingZorch"
+	DropItem "NewPropulsorZorchSpawner"
+}
+
+Actor _Mana3 : RandomSpawner replaces Mana3 8004
+{
+	DropItem "NewMiniZorchPack"
+	DropItem "NewLargeZorchPack"
+	DropItem "NewPropulsorZorchPack"
+	DropItem "NewPhasingZorchPack"
+}
+
+Actor _ArtiBoostMana : RandomSpawner replaces ArtiBoostMana 8003
+{
+	DropItem "NewZorchpack"
+}

@@ -1,0 +1,46 @@
+//Ammo spawner
+
+Actor ClipSpawner : RandomSpawner replaces Clip 2007
+{
+	DropItem "NewMiniZorchRecharge"
+}
+
+Actor ClipBoxSpawner : RandomSpawner replaces ClipBox 2048
+{
+	DropItem "NewMiniZorchPack"
+}
+
+Actor ShellSpawner : RandomSpawner replaces Shell 2008
+{
+	DropItem "NewLargeZorchRecharge"
+}
+
+Actor ShellBoxSpawner : RandomSpawner replaces ShellBox 2049
+{
+	DropItem "NewLargeZorchPack"
+}
+
+Actor RocketAmmoSpawner : RandomSpawner replaces RocketAmmo 2010
+{
+	DropItem "NewPropulsorZorch"
+}
+
+Actor RocketBoxSpawner : RandomSpawner replaces RocketBox 2046
+{
+	DropItem "NewPropulsorZorchPack"
+}
+
+Actor CellSpawner : RandomSpawner replaces Cell 2047
+{
+	DropItem "NewPhasingZorch"
+}
+
+Actor CellPackSpawner : RandomSpawner replaces CellPack 17
+{
+	DropItem "NewPhasingZorchPack"
+}
+
+Actor BackpackSpawner : RandomSpawner replaces Backpack 8
+{
+	DropItem "NewZorchpack"
+}

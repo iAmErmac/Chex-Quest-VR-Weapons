@@ -1,0 +1,39 @@
+ACTOR NewRapidZorcher : RapidZorcher replaces RapidZorcher
+{
+   States
+   {
+   Ready:
+     CHGG A 1 A_WeaponReady
+     Loop
+   Deselect:
+     CHGG A 1 A_Lower
+     Loop
+   Select:
+     CHGG A 1 A_Raise
+     Loop
+   Fire:
+     CHGG BCD 1
+     CHGG E 1 A_FireCGun
+     CHGG FGH 1
+     CHGG I 1 A_FireCGun
+   Hold:
+     CHGG KLM 1
+     CHGG N 1 A_FireCGun
+     CHGG OPQ 1
+     CHGG R 1 A_FireCGun
+     CHGG STU 1
+     CHGG V 1 A_FireCGun
+     CHGG V 0 A_ReFire
+     Goto Ready
+   Flash:
+     CHGF A 2 Bright A_Light1
+     Goto LightDone
+     CHGF B 2 Bright A_Light1
+     Goto LightDone
+     CHGF C 2 Bright A_Light1
+     Goto LightDone
+   Spawn:
+     MGUN A -1 Bright
+     Stop
+   }
+}

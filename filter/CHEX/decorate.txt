@@ -1,0 +1,2 @@
+//decorate overrides
+#include "Decorate/ammo.txt"

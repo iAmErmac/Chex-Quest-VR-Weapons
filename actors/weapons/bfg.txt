@@ -1,0 +1,60 @@
+ACTOR NewLAZDevice : LAZDevice replaces LAZDevice
+{
+  States
+  {
+  Ready:
+    BFGG A 1 A_WeaponReady
+    Loop
+  Deselect:
+    BFGG A 1 A_Lower
+    Loop
+  Select:
+    BFGG A 1 A_Raise
+    Loop
+  Fire:
+    BFGG ABCDE 4 A_BFGSound
+    BFGG E 10 A_GunFlash
+    BFGG E 10 A_FireCustomMissile("NewLAZBall")
+    BFGG DCB 5 A_ReFire
+    BFGG B 5 A_ReFire
+    Goto Ready
+  Flash:
+    BFGF AB 4 Bright A_Light1
+    BFGF CD 4 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    BFUG A -1 Bright
+    Stop
+  OldFire:
+    BFGG A 10 A_BFGSound
+    BFGG BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1 A_FireOldBFG
+    BFGG B 0 A_Light0
+    BFGG B 20 A_ReFire
+    Goto Ready
+  }
+}
+
+ACTOR NewLAZBall : BFGBall
+{
+  Radius 13
+  Height 8
+  Speed 25
+  Damage 100
+  Projectile
+  +RANDOMIZE
+  Alpha 0.75
+  DeathSound "weapons/bfgx"
+  RenderStyle Translucent
+  Obituary "$OB_MPLAZ_BOOM" // "%o fell prey to %k's LAZ device."
+  States
+  {
+  Spawn:
+    LZS1 AB 4 Bright
+    Loop
+  Death:
+    LZE1 AB 8 Bright
+    LZE1 C 8 Bright A_BFGSpray
+    LZE1 DEF 8 Bright
+    Stop
+  }
+}

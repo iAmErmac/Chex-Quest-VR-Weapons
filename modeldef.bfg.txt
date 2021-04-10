@@ -1,0 +1,42 @@
+Model NewLAZDevice
+{
+	Path "models/weapons/lazdevice"
+	Model 0 "LAZDevice.md3"
+	SurfaceSkin 0 0 "LAZDevice.png"
+	SurfaceSkin 0 1 "LAZDevice.png"
+	SurfaceSkin 0 2 "LAZDevice.png"
+	SurfaceSkin 0 3 "LAZDevice_screen.png"
+	SurfaceSkin 0 4 "blank_white.png"
+
+	Offset 5.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex BFGG A 0 0
+	SurfaceSkin 0 0 "LAZDevice_F.png"
+	SurfaceSkin 0 1 "LAZDevice_F.png"
+	FrameIndex BFGG B 0 1
+	FrameIndex BFGG C 0 2
+	FrameIndex BFGG D 0 3
+	FrameIndex BFGG E 0 4
+}
+
+//Muzzle flash
+Model NewLAZDevice
+{
+	Path "models/weapons/lazdevice"
+	Model 0 "LAZDevice_MF.md3"
+	Skin 0 "LAZDevice_MF1.png"
+
+	Offset 2.0 -27.0 -12.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex BFGF A 0 0 
+	Skin 0 "LAZDevice_MF2.png"
+	FrameIndex BFGF B 0 0 
+	Skin 0 "LAZDevice_MF3.png"
+	FrameIndex BFGF C 0 0
+	Skin 0 "LAZDevice_MF4.png" 
+	FrameIndex BFGF D 0 0 
+}

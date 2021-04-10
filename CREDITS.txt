@@ -1,0 +1,10 @@
+Chex Quest 3D Weapons for VR
+
+A Chex Quest 3D weapon mod for Doom/Heretic/Hexen/Strife/Chex by Ermac (https://www.reddit.com/user/iAmErmac)
+
+Resource credits:
+=================
+Id Software: For the amazing doom engine
+Digital Café: for original Chex Quest sprites and sounds
+Team Chex Quest HD: for 3D models
+Ryuhi (Heretical Doom): for ideas on wad support (filter) codes

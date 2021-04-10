@@ -1,0 +1,21 @@
+//Weapon spawner
+
+Actor _AB3DPulseRifle : SporkSpawner replaces AB3DPulseRifle 15101
+{
+}
+
+Actor _AB3DShotgun : LarzeZorcherSpawner replaces AB3DShotgun 15102
+{
+}
+
+Actor _AB3DGrenadeLauncher : ZorchPropulsorSpawner replaces AB3DGrenadeLauncher 15104
+{
+}
+
+Actor _AB3DRocketLauncher : LAZDeviceSpawner replaces AB3DRocketLauncher 15105
+{
+}
+
+Actor _AB3DPlasmaGun : PhasingZorcherSpawner replaces AB3DPlasmaGun 15103
+{
+}

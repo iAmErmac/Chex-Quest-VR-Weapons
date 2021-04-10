@@ -1,0 +1,131 @@
+//Weapon spawner
+
+Actor PistolSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("NewMiniZorcher", 1, "DropClip", AAPTR_PLAYER1)
+		TNT1 A 0 A_DropItem("MiniZorcherSpawner")
+		Stop
+	DropClip:
+		TNT1 A 0 A_DropItem("NewMiniZorchRecharge")
+		Stop
+	}
+}
+
+Actor _MiniZorcherSpawner : PistolSpawner replaces RocketRifle
+{
+}
+
+Actor _MiniZorcherSpawner2 : PistolSpawner replaces RocketRifleGiver 8020
+{
+}
+
+Actor _LarzeZorcherSpawner : LarzeZorcherSpawner replaces FateCrossbow
+{
+}
+
+Actor _LarzeZorcherSpawner2 : LarzeZorcherSpawner replaces CrossbowGiver 8034
+{
+}
+
+Actor SuperShotgunSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("NewSuperLargeZorcher", 1, "DropShell", AAPTR_PLAYER1)
+		TNT1 A 0 A_DropItem("SuperLarzeZorcherSpawner")
+		Stop
+	DropShell:
+		TNT1 A 0 A_DropItem("NewLargeZorchRecharge")
+		Stop
+	}
+}
+
+Actor _SuperLarzeZorcherSpawner : SuperShotgunSpawner replaces PoisonStaff
+{
+}
+
+Actor _SuperLarzeZorcherSpawner2 : SuperShotgunSpawner replaces PoisonStaffGiver 8057
+{
+}
+
+Actor _ChaingunSpawner : RandomSpawner replaces ShockGrenadeWeapon 8040
+{
+	DropItem "RapidZorcherSpawner", 256, 3
+	DropItem "ZorchPropulsorSpawner", 256, 2
+}
+
+Actor DestroyerPiece1_replacer: DestroyerPiece1 replaces DestroyerPiece1 8044
+{
+	WeaponPiece.Weapon "PhasingZorcherSpawner"
+}
+
+Actor DestroyerPiece2_replacer: DestroyerPiece2 replaces DestroyerPiece2 8045
+{
+	WeaponPiece.Weapon "PhasingZorcherSpawner"
+}
+
+Actor DestroyerPiece3_replacer: DestroyerPiece3 replaces DestroyerPiece3 8046
+{
+	WeaponPiece.Weapon "PhasingZorcherSpawner"
+}
+
+Actor _PhasingZorcherSpawner : PhasingZorcherSpawner replaces Destroyer
+{
+}
+
+Actor _PhasingZorcherSpawner2 : PhasingZorcherSpawner replaces DestroyerGiver 8065
+{
+}
+
+Actor PortalCrossbowPiece1_replacer : PortalCrossbowPiece1 replaces PortalCrossbowPiece1 8050
+{
+	WeaponPiece.Weapon "LAZDeviceSpawner"
+}
+
+Actor PortalCrossbowPiece2_replacer : PortalCrossbowPiece2 replaces PortalCrossbowPiece2 8051
+{
+	WeaponPiece.Weapon "LAZDeviceSpawner"
+}
+
+Actor PortalCrossbowPiece3_replacer : PortalCrossbowPiece3 replaces PortalCrossbowPiece3 8052
+{
+	WeaponPiece.Weapon "LAZDeviceSpawner"
+}
+
+Actor _LAZDeviceSpawner : LAZDeviceSpawner replaces PortalCrossbow 8049
+{
+}
+
+Actor _LAZDeviceSpawner2 : RandomSpawner replaces FlailCannonPiece
+{
+	DropItem "LAZDeviceSpawner", 256, 2
+	DropItem "Vanilla_PlasmaRifle", 256, 1
+}
+
+Actor _LAZDeviceSpawner3 : RandomSpawner replaces FlailCannonPiece1
+{
+	DropItem "LAZDeviceSpawner", 256, 2
+	DropItem "PhasingZorcherSpawner", 256, 1
+}
+
+Actor _LAZDeviceSpawner4 : RandomSpawner replaces FlailCannonPiece2
+{
+	DropItem "LAZDeviceSpawner", 256, 3
+	DropItem "PhasingZorcherSpawner", 256, 2
+}
+
+Actor _LAZDeviceSpawner5 : RandomSpawner replaces FlailCannonPiece3
+{
+	DropItem "LAZDeviceSpawner", 256, 3
+	DropItem "PhasingZorcherSpawner", 256, 2
+}
+
+Actor _LAZDeviceSpawner6 : Vanilla_BFGSpawner replaces FlailCannon
+{
+}

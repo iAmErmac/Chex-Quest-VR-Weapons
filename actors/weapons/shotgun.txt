@@ -1,0 +1,63 @@
+ACTOR NewLargeZorcher : LargeZorcher replaces LargeZorcher
+{
+  States
+  {
+  Ready:
+    SHTG A 1 A_WeaponReady
+    Loop
+  Deselect:
+    SHTG A 1 A_Lower
+    Loop
+  Select:
+    SHTG A 1 A_Raise
+    Loop
+  Fire:
+    SHTG A 3
+    SHTG B 7 A_FireShotgun
+    SHTG EFGHIJKLMNOPQRSTUVWXYZ 1
+    SHT2 ABCDEFGH 1
+    SHT2 IJ 1 A_ReFire
+    Goto Ready
+  Flash:
+	TNT1 A 1
+    SHTF A 2 Bright A_Light1
+    SHTF B 3 Bright A_Light1
+    SHTF C 2 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    SHOT A -1 Bright
+    Stop
+  }
+}
+
+Actor NewLargeZorcherClipBracket : Inventory
+{
+	Inventory.PickupMessage ""
+	RenderStyle "Translucent"
+	Alpha 1
+	inventory.amount 0
+	inventory.maxamount 1
+	
+	States
+	{
+	Spawn:
+		SHTC A -1
+		Stop
+	}
+}
+
+Actor NewLargeZorchPackClipBracket : Inventory
+{
+	Inventory.PickupMessage ""
+	RenderStyle "Translucent"
+	Alpha 1
+	inventory.amount 0
+	inventory.maxamount 1
+	
+	States
+	{
+	Spawn:
+		SBXG A -1
+		Stop
+	}
+}

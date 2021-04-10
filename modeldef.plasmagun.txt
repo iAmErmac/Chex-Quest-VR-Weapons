@@ -1,0 +1,45 @@
+Model NewPhasingZorcher
+{
+	Path "models/weapons/phasingzorcher"
+	Model 0 "PhasingZorcher.md3"
+	SurfaceSkin 0 0 "PhasingZorcher.png"
+	SurfaceSkin 0 1 "PhasingZorcher.png"
+	SurfaceSkin 0 2 "meter_r.png"
+	SurfaceSkin 0 3 "meter_r.png"
+	SurfaceSkin 0 4 "meter_g.png"
+	SurfaceSkin 0 5 "meter_g.png"
+
+	Offset 2.0 -26.0 -12.0
+	Scale -1.0 1.0 1.0
+	ZOffset -3
+
+	FrameIndex PLSG A 0 0
+	SurfaceSkin 0 1 "PhasingZorcher_F.png"
+	FrameIndex PLSG B 0 4
+	FrameIndex PLSG C 0 5
+	FrameIndex PLSG D 0 6
+	FrameIndex PLSG E 0 7
+	FrameIndex PLSG F 0 8
+	FrameIndex PLSG G 0 9
+	FrameIndex PLSG H 0 10
+	FrameIndex PLSG I 0 11
+	FrameIndex PLSG J 0 12
+	FrameIndex PLSG K 0 13
+	FrameIndex PLSG L 0 14
+}
+
+//Muzzle flash
+Model NewPhasingZorcher
+{
+	Path "models/weapons/phasingzorcher"
+	Model 0 "PhasingZorcher_MF.md3"
+	Skin 0 "PhasingZorcher_MF3.png"
+
+	Offset 2.0 -23.0 -9.0
+	Scale -1.0 1.0 1.0
+	ZOffset 0
+
+	FrameIndex PLSF A 0 17
+	FrameIndex PLSF B 0 20
+	FrameIndex PLSF C 0 23
+}

@@ -1,0 +1,134 @@
+
+//Ammo
+
+Actor NewMiniZorchRecharge : MiniZorchRecharge
+{
+	+FLOATBOB
+	+NOGRAVITY
+	
+	States
+	{
+	Spawn:
+		CLIP A -1 Bright
+		Stop
+	}
+}
+
+Actor NewMiniZorchPack : MiniZorchPack
+{
+	States
+	{
+	Spawn:
+		AMMO A -1
+		Stop
+	}
+}
+
+Actor NewLargeZorchRecharge : LargeZorchRecharge
+{
+	+FLOATBOB
+	+NOGRAVITY
+	
+	RenderStyle "Translucent"
+	Alpha 1
+	
+	States
+	{
+	Spawn:
+		SHEL A -1 Bright
+		Stop
+	}
+}
+
+Actor NewLargeZorchPack : LargeZorchPack
+{	
+	States
+	{
+	Spawn:
+		SBOX A -1
+		Stop
+	}
+}
+
+Actor NewPropulsorZorch : PropulsorZorch
+{
+	+FLOATBOB
+	+NOGRAVITY
+	
+	States
+	{
+	Spawn:
+		ROCK A -1 Bright
+		Stop
+	}
+}
+
+Actor NewPropulsorZorchPack : PropulsorZorchPack
+{
+	States
+	{
+	Spawn:
+		BROK A -1
+		Stop
+	}
+}
+
+Actor NewPhasingZorch : PhasingZorch
+{
+	States
+	{
+	Spawn:
+		CELL A -1
+		Stop
+	}
+}
+
+Actor NewPhasingZorchPack : PhasingZorchPack
+{
+	States
+	{
+	Spawn:
+		CELP A -1
+		Stop
+	}
+}
+
+Actor NewZorchPack : ZorchPack
+{
+}
+
+
+//Special spanwers for floating ammo
+
+Actor MiniZorchRechargeSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewMiniZorchRecharge", 0, 20)
+		Stop
+	}
+}
+
+Actor NewLargeZorchRechargeSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewLargeZorchRecharge", 0, 20)
+		Stop
+	}
+}
+
+Actor NewPropulsorZorchSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_SpawnItem("NewPropulsorZorch", 0, 20)
+		Stop
+	}
+}

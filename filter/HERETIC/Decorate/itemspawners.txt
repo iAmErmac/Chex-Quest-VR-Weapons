@@ -1,0 +1,8 @@
+
+//Item spawner
+
+Actor _ArtiTomeOfPower : RandomSpawner replaces ArtiTomeOfPower 86
+{
+	//DropItem "DamageSphere"
+	DropItem "RapidFirePowerup"
+}

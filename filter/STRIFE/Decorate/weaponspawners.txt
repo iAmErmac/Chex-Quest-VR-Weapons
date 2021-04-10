@@ -1,0 +1,50 @@
+//Weapon spawners
+
+ACTOR _StrifeCrossbow : LargeZorcherSpawner replaces StrifeCrossbow 2001
+{
+	ConversationID 194
+}
+
+ACTOR _StrifeCrossbow2 : _StrifeCrossbow replaces StrifeCrossbow2 
+{
+}
+
+ACTOR _AssaultGun : RapidZorcherSpawner replaces AssaultGun 2002 //replaces rifle
+{
+	ConversationID 188 //250 Gold
+}
+
+ACTOR _AssaultGunStanding : RandomSpawner replaces AssaultGunStanding 2006
+{
+	ConversationID 189
+	DropItem "SuperLargeZorcherSpawner", 256, 2
+	DropItem "RapidZorcherSpawner", 256, 1
+}
+
+ACTOR _Flamethrower : PhasingZorcherSpawner replaces Flamethrower 2005
+{
+	ConversationID 190
+}
+
+ACTOR _MiniMissileLauncher : ZorchPropulsorSpawner replaces MiniMissileLauncher 2003
+{
+	ConversationID 192
+}
+
+ACTOR _StrifeGrenadeLauncher : _MiniMissileLauncher replaces StrifeGrenadeLauncher 154
+{
+	ConversationID 195
+}
+
+ACTOR _StrifeGrenadeLauncher2 : _MiniMissileLauncher replaces StrifeGrenadeLauncher2
+{
+}
+
+ACTOR _Mauler : LAZDeviceSpawner replaces Mauler 2004
+{
+	ConversationID 193
+}
+
+ACTOR _Mauler2 : _Mauler replaces Mauler2
+{
+}

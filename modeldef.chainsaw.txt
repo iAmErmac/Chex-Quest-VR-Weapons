@@ -1,0 +1,128 @@
+//Ready
+Model NewSuperBootspork
+{
+	Path "models/weapons/spork"
+	Model 0 "spork.md3"
+	Model 1 "spork_spark.md3"
+	Skin 0 "spork.png"
+	Skin 1 "spork_mf3.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -5
+
+	FrameIndex SAWG A 0 0	FrameIndex SAWG A 1 0
+	FrameIndex SAWG B 0 4	FrameIndex SAWG A 1 4
+	Skin 1 "spork_mf4.png"
+	FrameIndex SAWG C 0 9	FrameIndex SAWG A 1 9
+	FrameIndex SAWG D 0 14	FrameIndex SAWG A 1 14
+	Skin 1 "spork_mf5.png"
+	FrameIndex SAWG E 0 19	FrameIndex SAWG A 1 19
+	FrameIndex SAWG F 0 24	FrameIndex SAWG A 1 24
+	Skin 1 "spork_mf6.png"
+	FrameIndex SAWG G 0 29	FrameIndex SAWG A 1 29
+	FrameIndex SAWG H 0 34	FrameIndex SAWG A 1 35
+}
+
+//Fire
+Model NewSuperBootspork
+{
+	Path "models/weapons/spork"
+	Model 0 "spork_fire.md3"
+	Skin 0 "spork.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -5
+
+	FrameIndex SAWF A 0 23
+	FrameIndex SAWF B 0 25
+	FrameIndex SAWF C 0 27
+	FrameIndex SAWF D 0 29
+	FrameIndex SAWF E 0 31
+	FrameIndex SAWF F 0 33
+	FrameIndex SAWF G 0 35
+	FrameIndex SAWF H 0 37
+}
+
+//Hold
+Model NewSuperBootspork
+{
+	Path "models/weapons/spork"
+	Model 0 "spork_fire.md3"
+	Model 1 "spork_hold_spark.md3"
+	Skin 0 "spork.png"
+	Skin 1 "spork_mf3.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -5
+
+	FrameIndex SAWH A 0 38	FrameIndex SAWH A 1 34
+	Skin 1 "spork_mf4.png"
+	FrameIndex SAWH B 0 40	FrameIndex SAWH A 1 39
+	Skin 1 "spork_mf5.png"
+	FrameIndex SAWH C 0 42	FrameIndex SAWH A 1 44
+	Skin 1 "spork_mf6.png"
+	FrameIndex SAWH D 0 44	FrameIndex SAWH A 1 49
+	Skin 1 "spork_mf3.png"
+	FrameIndex SAWH E 0 46	FrameIndex SAWH A 1 34
+	Skin 1 "spork_mf4.png"
+	FrameIndex SAWH F 0 48	FrameIndex SAWH A 1 39
+	Skin 1 "spork_mf5.png"
+	FrameIndex SAWH G 0 50	FrameIndex SAWH A 1 44
+	Skin 1 "spork_mf6.png"
+	FrameIndex SAWH H 0 52	FrameIndex SAWH A 1 49
+}
+
+//Attack flash
+Model NewSuperBootspork
+{
+	Path "models/weapons/spork"
+	Model 0 "spork_mf.md3"
+	Skin 0 "spork_mf1.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -5
+
+	FrameIndex SWFF A 0 0
+	Skin 0 "spork_mf2.png"
+	FrameIndex SWFF B 0 2
+	Skin 0 "spork_mf3.png"
+	FrameIndex SWFF C 0 4
+	Skin 0 "spork_mf4.png"
+	FrameIndex SWFF D 0 6
+	Skin 0 "spork_mf5.png"
+	FrameIndex SWFF E 0 8
+	Skin 0 "spork_mf6.png"
+	FrameIndex SWFF F 0 10
+	Skin 0 "spork_mf7.png"
+	FrameIndex SWFF G 0 12
+}
+
+//Hold flash
+Model NewSuperBootspork
+{
+	Path "models/weapons/spork"
+	Model 0 "spork_mf.md3"
+	Skin 0 "spork_mf1.png"
+
+	Offset 1.0 -26.0 -14.0
+	Scale -1.0 1.0 1.0
+	ZOffset -5
+
+	FrameIndex SWHF A 0 16
+	Skin 0 "spork_mf2.png"
+	FrameIndex SWHF B 0 16
+	Skin 0 "spork_mf3.png"
+	FrameIndex SWHF C 0 16
+	Skin 0 "spork_mf4.png"
+	FrameIndex SWHF D 0 16
+	Skin 0 "spork_mf5.png"
+	FrameIndex SWHF E 0 16
+	Skin 0 "spork_mf6.png"
+	FrameIndex SWHF F 0 16
+	Skin 0 "spork_mf7.png"
+	FrameIndex SWHF G 0 16
+}

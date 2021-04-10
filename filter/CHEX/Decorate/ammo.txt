@@ -1,0 +1,85 @@
+
+//Ammo
+
+Actor NewMiniZorchRecharge : MiniZorchRecharge replaces Clip 2007
+{
+	States
+	{
+	Spawn:
+		CLIP A -1
+		Stop
+	}
+}
+Actor NewMiniZorchPack : MiniZorchPack replaces ClipBox 2048
+{
+	States
+	{
+	Spawn:
+		AMMO A -1
+		Stop
+	}
+}
+Actor NewLargeZorchRecharge : LargeZorchRecharge replaces Shell 2008
+{
+	RenderStyle "Translucent"
+	Alpha 1
+	
+	States
+	{
+	Spawn:
+		SHEL A -1
+		Stop
+	}
+}
+Actor NewLargeZorchPack : LargeZorchPack replaces ShellBox 2049
+{	
+	States
+	{
+	Spawn:
+		SBOX A -1
+		Stop
+	}
+}
+Actor NewPropulsorZorch : PropulsorZorch replaces RocketAmmo 2010
+{
+	States
+	{
+	Spawn:
+		ROCK A -1
+		Stop
+	}
+}
+Actor NewPropulsorZorchPack : PropulsorZorchPack replaces RocketBox 2046
+{
+	States
+	{
+	Spawn:
+		BROK A -1
+		Stop
+	}
+}
+Actor NewPhasingZorch : PhasingZorch replaces Cell 2047
+{
+	States
+	{
+	Spawn:
+		CELL A -1
+		Stop
+	}
+}
+Actor NewPhasingZorchPack : PhasingZorchPack replaces CellPack 17
+{
+	States
+	{
+	Spawn:
+		CELP A -1
+		Stop
+	}
+}
+
+
+//Items
+
+Actor NewZorchpack : Zorchpack replaces Backpack 8
+{
+}
