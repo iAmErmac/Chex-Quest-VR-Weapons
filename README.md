@@ -37,6 +37,22 @@ This is a weapon mod for Chex Quest 3 (https://www.moddb.com/games/chex-quest/do
 * Fate: A Doom Total Conversion (https://www.moddb.com/mods/fate-a-doom-total-conversion/)
 * Project Osiris: Alien Breed 3D (https://forum.zdoom.org/viewtopic.php?f=19&t=67666)
 
+# Recommended mods to combine with:
+
+* [Chex Quest voxel pack by PSTrooper and friends:](https://forum.zdoom.org/viewtopic.php?f=37&t=55027)
+  - Direct download link: http://www.mediafire.com/file/1uox3cvah8q0z89/ChexVox.pk3/file
+
+
+* [Chex Quest HD Music:](https://www.moddb.com/games/chex-quest/addons/chex-quest-hd-music-mod)
+  - Direct download link: https://www.moddb.com/games/chex-quest/addons/chex-quest-hd-music-mod
+
+
+* [Brutal Bolognese Gore mod:](https://www.doomworld.com/forum/topic/103167-brutal-bolognese-gore-mod-the-sucessor-to-ketchup-version-20-released/)
+  - Needs to be used in combination with a patch to make the blood appears green.
+  - Direct download link: https://www.mediafire.com/file/c9lczhk7jd5iu2b/sm4BBgorev2.zip/file
+  - Green blood patch: https://www.doomworld.com/applications/core/interface/file/attachment.php?id=45545
+
+
 # Credits
 
 * Digital Café - for original Chex Quest sprites and sounds
