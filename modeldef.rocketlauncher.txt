@@ -6,7 +6,6 @@ Model NewZorchPropulsor
 
 	Offset 4.0 -26.0 -12.0
 	Scale -1.0 1.0 1.0
-	ZOffset -3
 
 	FrameIndex MISG A 0 0
 	Skin 0 "ZorchPropulsor_F0.png"
@@ -46,7 +45,6 @@ Model NewZorchPropulsor
 
 	Offset 4.0 -26.0 -12.0
 	Scale -1.0 1.0 1.0
-	ZOffset -3
 
 	FrameIndex MISF A 0 0
 	Skin 0 "ZorchPropulsor_MF2.png"

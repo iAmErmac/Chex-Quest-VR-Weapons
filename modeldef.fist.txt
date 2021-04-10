@@ -6,7 +6,6 @@ Model NewBootspoon
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -5
 
 	FrameIndex PUNG A 0 0
 	FrameIndex PUNG B 0 3
@@ -24,7 +23,6 @@ Model NewBootspoon
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -5
 
 	FrameIndex PUNF A 0 0
 	Skin 0 "spoon_mf2.png"

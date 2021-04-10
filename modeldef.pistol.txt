@@ -14,7 +14,6 @@ Model NewMiniZorcher
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -3
 
 	FrameIndex PISG A 0 0
 	SurfaceSkin 0 1 "MiniZorcher_f.png"
@@ -37,7 +36,6 @@ Model NewMiniZorcher
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -3
 
 	FrameIndex PISF A 0 0 
 }
@@ -59,7 +57,6 @@ Model SilencedMiniZorcher
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -3
 
 	FrameIndex PISG A 0 0
 	SurfaceSkin 0 1 "MiniZorcher_f.png"
@@ -82,7 +79,6 @@ Model SilencedMiniZorcher
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -3
 
 	FrameIndex PISF A 0 0 
 }

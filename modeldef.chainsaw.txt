@@ -9,7 +9,6 @@ Model NewSuperBootspork
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -5
 
 	FrameIndex SAWG A 0 0	FrameIndex SAWG A 1 0
 	FrameIndex SAWG B 0 4	FrameIndex SAWG A 1 4
@@ -33,7 +32,6 @@ Model NewSuperBootspork
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -5
 
 	FrameIndex SAWF A 0 23
 	FrameIndex SAWF B 0 25
@@ -56,7 +54,6 @@ Model NewSuperBootspork
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -5
 
 	FrameIndex SAWH A 0 38	FrameIndex SAWH A 1 34
 	Skin 1 "spork_mf4.png"
@@ -84,7 +81,6 @@ Model NewSuperBootspork
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -5
 
 	FrameIndex SWFF A 0 0
 	Skin 0 "spork_mf2.png"
@@ -110,7 +106,6 @@ Model NewSuperBootspork
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -5
 
 	FrameIndex SWHF A 0 16
 	Skin 0 "spork_mf2.png"

@@ -23,7 +23,6 @@ Model NewSuperLargeZorcher
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -3
 
 	//Ready
 	FrameIndex SHT2 A 0 0	FrameIndex SHT2 A 1 0
@@ -103,7 +102,6 @@ Model NewSuperLargeZorcher
 
 	Offset 1.0 -26.0 -14.0
 	Scale -1.0 1.0 1.0
-	ZOffset -3
 
 	FrameIndex SHTF A 0 0
 	Skin 0 "LargeZorcher_MF2.png"
